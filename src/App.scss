@@ -1,3 +1,10 @@
+// Override default variables before the import.
+$body-bg: #000;
+
+// Import Bootstrap and its default variables.
+@import '~bootstrap/scss/bootstrap.scss';
+
+// @todo: remove and use component partials.
 .App {
   text-align: center;
 }
