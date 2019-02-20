@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Alerts from './../data/alerts';
+import Alerts from './../../../data/alerts';
 
 class AlertsMenu extends Component {
   constructor(props) {

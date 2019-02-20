@@ -1,4 +1,5 @@
 import React from 'react';
+import LoginForm from './../../components/LoginForm';
 
 const Home = (props) => {
   if (props.auth) {
@@ -8,7 +9,10 @@ const Home = (props) => {
   }
 
   return (
-    <h1>Home Page</h1>
+    <div>
+      <h1>Agent Portal Log In</h1>
+      <LoginForm />
+    </div>
   );
 };
 
