@@ -22,7 +22,7 @@ const Header = (props) => {
           <SearchBar />
           <Button href="#" variant="primary">Create Account</Button>
           <AlertsMenu />
-          <AccountMenu auth = {this.props.auth} logout={this.props.logout}/>
+          <AccountMenu auth = {props.auth} logout={props.logout}/>
         </div>
       </header>
     );

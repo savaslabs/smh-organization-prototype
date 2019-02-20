@@ -10,7 +10,14 @@ class App extends Component {
     this.state = {
       auth: false
     };
+    this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
+  }
+
+  login() {
+    this.setState({
+      auth: true
+    })
   }
 
   logout() {
@@ -28,7 +35,7 @@ class App extends Component {
             <Switch>
               <Route
                 exact path='/'
-                render={() => <Home auth={this.state.auth} />}
+                render={() => <Home auth={this.state.auth} login={this.login}/>}
               />
               <Route render={function () {
                 return <p>Not Found</p>
