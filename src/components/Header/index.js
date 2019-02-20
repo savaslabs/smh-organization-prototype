@@ -13,6 +13,14 @@ const Logo = () => {
   );
 };
 
+const CreateAccount = () => {
+  return (
+    <div className="header__item">
+      <Button href="#" variant="primary">Create Account</Button>
+    </div>
+  )
+};
+
 const Header = (props) => {
   if (props.auth) {
     return (
@@ -20,7 +28,7 @@ const Header = (props) => {
         <div className="container">
           <Logo />
           <SearchBar />
-          <Button href="#" variant="primary">Create Account</Button>
+          <CreateAccount />
           <AlertsMenu />
           <AccountMenu auth = {props.auth} logout={props.logout}/>
         </div>

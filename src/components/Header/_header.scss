@@ -3,9 +3,28 @@
   margin-bottom: 3em;
 
   .container {
+    align-items: center;
     display: flex;
-    justify-content: space-between;
     padding-bottom: 2em;
     padding-top: 2em;
+  }
+
+  .logo {
+    font-size: 2em;
+    margin-right: auto;
+  }
+
+  .list-group {
+    min-width: 300px;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.header__item {
+  padding: 0 1em;
+
+  &:last-child {
+    padding-right: 0;
   }
 }
