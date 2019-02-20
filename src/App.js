@@ -22,17 +22,19 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className='container'>
+        <div className='app'>
           <Header auth={this.state.auth} logout={this.logout}/>
-          <Switch>
-            <Route
-              exact path='/'
-              render={() => <Home auth={this.state.auth} />}
-            />
-            <Route render={function () {
-              return <p>Not Found</p>
-            }} />
-          </Switch>
+          <main className='container'>
+            <Switch>
+              <Route
+                exact path='/'
+                render={() => <Home auth={this.state.auth} />}
+              />
+              <Route render={function () {
+                return <p>Not Found</p>
+              }} />
+            </Switch>
+          </main>
           <Footer />
         </div>
       </Router>

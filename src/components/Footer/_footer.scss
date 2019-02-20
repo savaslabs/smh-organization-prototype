@@ -1,0 +1,31 @@
+.footer {
+  background-color: transparentize($blue, .4);
+  margin-top: 3em;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2em;
+    padding-top: 2em;
+  }
+
+  p,
+  ul {
+    margin: 0;
+  }
+}
+
+.menu--footer {
+  display: flex;
+
+  li {
+    list-style-type: none;
+    padding: 0 $spacer;
+  }
+
+  a {
+    color: $white;
+    font-size: .8em;
+    text-transform: uppercase;
+  }
+}

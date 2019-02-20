@@ -1,0 +1,11 @@
+.header {
+  background-color: transparentize($blue, .8);
+  margin-bottom: 3em;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2em;
+    padding-top: 2em;
+  }
+}

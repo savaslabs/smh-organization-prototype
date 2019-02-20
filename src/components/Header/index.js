@@ -16,20 +16,24 @@ const Logo = () => {
 const Header = (props) => {
   if (props.auth) {
     return (
-      <header>
-        <Logo />
-        <SearchBar />
-        <Button href="#" variant="primary">Create Account</Button>
-        <AlertsMenu />
-        <AccountMenu auth = {this.props.auth} logout={this.props.logout}/>
+      <header className="header">
+        <div className="container">
+          <Logo />
+          <SearchBar />
+          <Button href="#" variant="primary">Create Account</Button>
+          <AlertsMenu />
+          <AccountMenu auth = {this.props.auth} logout={this.props.logout}/>
+        </div>
       </header>
     );
   }
 
   return (
-    <header>
-      <Logo />
-      <Link to="/">Log In</Link>
+    <header className="header">
+      <div className="container">
+        <Logo />
+        <Link to="/">Log In</Link>
+      </div>
     </header>
   );
 };
