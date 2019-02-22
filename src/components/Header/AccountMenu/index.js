@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import ListGroup from 'react-bootstrap/ListGroup';
+import { Navbar, NavDropdown } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 class AccountMenu extends Component {
@@ -22,20 +22,13 @@ class AccountMenu extends Component {
     }
 
     return (
-      <div className="menu--account header__item">
-        <button className="menu--account__icon" onClick={this.toggleState}>
-          Icon
-        </button>
-        {this.state.open &&
-        <div className="menu--account__list">
-          <ListGroup className="alerts">
-            <ListGroup.Item><Link to="/">Dashboard</Link></ListGroup.Item>
-            <ListGroup.Item><a href="/">Settings</a></ListGroup.Item>
-            <ListGroup.Item><a href="/" onClick={this.props.logout}>Log Out</a></ListGroup.Item>
-          </ListGroup>
-        </div>
-        }
-      </div>
+      <NavDropdown title="Account">
+        <Navbar.Text href="/"><Link to="/">Dashboard</Link></Navbar.Text>
+        <NavDropdown.Divider />
+        <Navbar.Text><a href="/">Settings</a></Navbar.Text>
+        <NavDropdown.Divider />
+        <Navbar.Text><a href="/" onClick={this.props.logout}>Log Out</a></Navbar.Text>
+      </NavDropdown>
     );
   }
 }

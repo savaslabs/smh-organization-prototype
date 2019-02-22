@@ -1,3 +1,9 @@
-.menu--alerts__list {
-  position: relative;
+.alerts {
+  .navbar-text {
+    border-bottom: solid 1px $gray-200;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
 }

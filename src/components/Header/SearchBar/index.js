@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import { Form, Button } from 'react-bootstrap';
 
 class SearchBar extends Component {
   render() {
     return (
-      <div className="header__item">
-        <Form className="form--search">
-          <Form.Control type="text" placeholder="Search members" />
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
-      </div>
+      <Form inline className="nav-item">
+        <Form.Control type="text" placeholder="Search members" />
+        <Button type="submit">Search</Button>
+      </Form>
     );
   }
 }

@@ -1,30 +1,37 @@
 .header {
   background-color: transparentize($blue, .8);
-  margin-bottom: 3em;
 
-  .container {
+  .navbar {
     align-items: center;
     display: flex;
     padding-bottom: 2em;
     padding-top: 2em;
   }
 
-  .logo {
-    font-size: 2em;
+  // @todo: replace with logo?
+  .navbar-brand {
+    color: $blue;
+    font-size: 1.5em;
     margin-right: auto;
   }
 
-  .list-group {
+  .navbar-collapse {
+    flex-grow: 0;
+    justify-content: flex-end;
+  }
+
+  .nav-item {
+    padding: 0 1em;
+  }
+
+  // Common dropdown menu styles.
+  .dropdown-menu {
+    left: auto;
     min-width: 300px;
-    position: absolute;
     right: 0;
   }
-}
 
-.header__item {
-  padding: 0 1em;
-
-  &:last-child {
-    padding-right: 0;
+  .navbar-text {
+    padding: .5rem;
   }
 }
