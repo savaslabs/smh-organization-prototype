@@ -1,4 +1,4 @@
-const Alerts = [
+const alerts = [
   {
     "alert": "Danielle Sloan accepted your request.",
     "time": "30 seconds ago",
@@ -16,4 +16,4 @@ const Alerts = [
   }
 ];
 
-export default Alerts;
+export default alerts;

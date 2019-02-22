@@ -1,0 +1,25 @@
+.page-heading {
+  background-color: $blue;
+  color: $white;
+  margin-bottom: 3em;
+  padding: 1em 0;
+
+  .container {
+    align-items: flex-end;
+    display: flex;
+  }
+}
+
+h1,
+.page-heading__subtitle {
+  margin-bottom: 0;
+}
+
+.page-heading__subtitle {
+  font-size: 1.25em;
+  margin-left: 1.5em;
+}
+
+.page-heading__cta {
+  margin-left: auto;
+}

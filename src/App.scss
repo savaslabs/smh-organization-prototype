@@ -1,4 +1,9 @@
-// Override default variables before the import.
+// Override default bootstrap variables before the import.
+$h1-font-size: 2rem;
+$h2-font-size: 1.75rem;
+$h3-font-size: 1.5rem;
+$h4-font-size: 1.25rem;
+$h5-font-size: 1rem;
 
 // Import Bootstrap and its default variables.
 @import '~bootstrap/scss/bootstrap.scss';
@@ -9,3 +14,4 @@
 @import 'components/Header/AccountMenu/account-menu';
 @import 'components/Header/AlertsMenu/alerts-menu';
 @import 'components/Header/SearchBar/search-bar';
+@import 'components/PageHeading/page-heading';
