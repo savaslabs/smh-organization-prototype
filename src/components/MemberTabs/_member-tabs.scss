@@ -1,0 +1,34 @@
+.member-tabs {
+  .nav-tabs {
+    border: 0;
+    font-size: $h2-font-size;
+    margin-bottom: 0;
+
+    a {
+      background-color: $white;
+      border-bottom: 0;
+      margin-bottom: 0;
+
+      &.active {
+        background-color: transparentize($blue, .8);
+      }
+    }
+  }
+
+  .tab-content {
+    background-color: transparentize($blue, .8);
+    padding: 1em;
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
