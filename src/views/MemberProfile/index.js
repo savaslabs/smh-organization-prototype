@@ -10,7 +10,14 @@ class MemberProfile extends Component {
     this.state = {
       active: 'MemberInfo'
     };
+    this.onSelect = this.onSelect.bind(this);
   }
+
+  onSelect = (active) => {
+    this.setState({
+      active: active
+    });
+  };
 
   render() {
     const id = this.props.match.params.id;
@@ -33,7 +40,7 @@ class MemberProfile extends Component {
         />
         <div className="container">
           <div className="row">
-            <Sidebar member={member} />
+            <Sidebar member={member} onSelect={this.onSelect}/>
             <MemberTabs member={member} active={this.state.active}/>
           </div>
         </div>

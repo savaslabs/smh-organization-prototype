@@ -36,8 +36,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Directory Structure
 
-Assets such as SCSS and images are coupled with their respective component
-JS files.
+SCSS assets are coupled with their respective component JS files.
 
 Component files are located in `/src/components`. Sub-components are located in
 the directory of the component in which they are used (e.g. the account menu

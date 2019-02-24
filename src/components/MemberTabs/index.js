@@ -1,11 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MemberInfo from './../../components/MemberTabs/MemberInfo';
+import MemberId from './../../components/MemberTabs/MemberId';
+import MemberRecords from './../../components/MemberTabs/MemberRecords';
+import MemberNotes from './../../components/MemberTabs/MemberNotes';
+import MemberLockbox from './../../components/MemberTabs/MemberLockbox';
 
-const MemberTabs = (props) => {
+const MemberTabs = ({ member, active }) => {
+  const activeTab = (active) => {
+    switch(active) {
+      case 'memberId':
+        return <MemberId member={member} />;
+      case 'memberRecords':
+        return <MemberRecords member={member} />;
+      case 'memberNotes':
+        return <MemberNotes member={member} />;
+      case 'memberLockbox':
+        return <MemberLockbox member={member} />;
+      default:
+        return <MemberInfo member={member} />;
+    }
+  };
+
   return (
     <div className="member-tabs col-md-9">
-      <MemberInfo member={props.member} />
+      {activeTab(active)}
     </div>
   );
 };
