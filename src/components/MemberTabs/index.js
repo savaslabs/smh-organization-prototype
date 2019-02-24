@@ -6,11 +6,11 @@ import MemberRecords from './../../components/MemberTabs/MemberRecords';
 import MemberNotes from './../../components/MemberTabs/MemberNotes';
 import MemberLockbox from './../../components/MemberTabs/MemberLockbox';
 
-const MemberTabs = ({ member, active }) => {
+const MemberTabs = ({ member, active, idVerified, medVerified }) => {
   const activeTab = (active) => {
     switch(active) {
       case 'memberId':
-        return <MemberId member={member} />;
+        return <MemberId member={member} idVerified={idVerified} />;
       case 'memberRecords':
         return <MemberRecords member={member} />;
       case 'memberNotes':

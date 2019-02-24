@@ -8,7 +8,8 @@ class MemberProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: 'MemberInfo'
+      active: 'MemberInfo',
+      verified: false
     };
     this.onSelect = this.onSelect.bind(this);
   }
@@ -29,6 +30,7 @@ class MemberProfile extends Component {
       )
     }
 
+    const { active, verified } = this.state;
     const subtitle = member.gender + ' | ' + member.age;
     return (
       <div>
@@ -41,7 +43,7 @@ class MemberProfile extends Component {
         <div className="container">
           <div className="row">
             <Sidebar member={member} onSelect={this.onSelect}/>
-            <MemberTabs member={member} active={this.state.active}/>
+            <MemberTabs member={member} active={active} verified={verified} />
           </div>
         </div>
       </div>

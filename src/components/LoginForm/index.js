@@ -7,12 +7,12 @@ import PropTypes from "prop-types";
 const LoginForm = (props) => {
   return (
     <Form className="form--login">
-      <Form.Group controlId="formBasicEmail">
+      <Form.Group controlId="loginEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
       </Form.Group>
 
-      <Form.Group controlId="formBasicPassword">
+      <Form.Group controlId="loginPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
