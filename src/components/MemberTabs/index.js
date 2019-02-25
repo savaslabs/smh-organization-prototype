@@ -10,7 +10,7 @@ const MemberTabs = ({ member, active, idVerified, medVerified }) => {
   const activeTab = (active) => {
     switch(active) {
       case 'memberId':
-        return <MemberId member={member} idVerified={idVerified} />;
+        return <MemberId member={member} idVerified={idVerified} medVerified={medVerified}/>;
       case 'memberRecords':
         return <MemberRecords member={member} />;
       case 'memberNotes':

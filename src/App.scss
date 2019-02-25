@@ -8,12 +8,16 @@ $h5-font-size: 1rem;
 // Import Bootstrap and its default variables.
 @import '~bootstrap/scss/bootstrap.scss';
 
-// Import custom styles.
+// Import global styles.
+@import 'styles/helpers';
+
+// Import component styles.
 @import 'components/Footer/footer';
 @import 'components/Header/header';
 @import 'components/Header/AccountMenu/account-menu';
 @import 'components/Header/AlertsMenu/alerts-menu';
 @import 'components/Header/SearchBar/search-bar';
+@import 'components/MemberTabs/MemberRecords/Records/records';
 @import 'components/PageHeading/page-heading';
 @import 'components/Sidebar/sidebar';
 @import 'components/MemberTabs/member-tabs';

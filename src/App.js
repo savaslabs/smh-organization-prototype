@@ -1,9 +1,39 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {
+  faTimes,
+  faSearch,
+  faAllergies,
+  faFemale,
+  faFileMedical,
+  faNotesMedical,
+  faHospital,
+  faUsers,
+  faSyringe,
+  faVials,
+  faPrescriptionBottleAlt
+} from '@fortawesome/free-solid-svg-icons'
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './views/Home';
 import MemberProfile from './views/MemberProfile';
+
+// Add font awesome icons to library for use in app.
+library.add(
+  faTimes,
+  faSearch,
+  faAllergies,
+  faFemale,
+  faFileMedical,
+  faNotesMedical,
+  faHospital,
+  faUsers,
+  faSyringe,
+  faVials,
+  faPrescriptionBottleAlt
+);
 
 class App extends Component {
   constructor(props) {

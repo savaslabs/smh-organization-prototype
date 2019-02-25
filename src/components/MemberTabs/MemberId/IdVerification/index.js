@@ -5,7 +5,7 @@ import { Form, Button } from 'react-bootstrap';
 const IdUnverified = () => (
   <Form>
     <Form.Group controlId="verifyIdType">
-      <Form.Label>Document Typet</Form.Label>
+      <Form.Label>Document Type</Form.Label>
       <Form.Control as="select">
         <option>Driver's License</option>
       </Form.Control>

@@ -1,0 +1,22 @@
+//
+// Helper classes.
+//
+
+.label--hidden {
+  label {
+    @include sr-only();
+  }
+}
+
+.form--search {
+  position: relative;
+
+  .fa-search {
+    left: 10px;
+    position: absolute;
+  }
+
+  input {
+    padding-left: 2em;
+  }
+}

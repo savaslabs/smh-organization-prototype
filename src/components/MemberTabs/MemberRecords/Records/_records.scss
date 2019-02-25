@@ -1,0 +1,23 @@
+.records__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.records__list__item {
+  align-items: center;
+  background-color: $white;
+  display: flex;
+  flex-basis: calc(33% - 15px);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 7.5px;
+  padding: 3em 0;
+
+  p {
+    font-size: 1.25em;
+    margin-top: .25em;
+    text-align: center;
+    width: 100%;
+  }
+}

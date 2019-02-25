@@ -22,6 +22,10 @@
 
   .nav-item {
     padding: 0 1em;
+
+    &.form--search {
+      padding-left: 0;
+    }
   }
 
   // Common dropdown menu styles.
