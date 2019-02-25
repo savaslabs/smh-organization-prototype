@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Tabs, Tab } from 'react-bootstrap';
 
-const MemberNotes = (props) => {
-  // const { member } = props;
+import Notes from './Notes';
+
+const MemberNotes = ({member}) => {
   return (
     <Tabs defaultActiveKey="notes">
       <Tab eventKey="notes" title="Notes">
         <h2 className="sr-only sr-only-focusable">Basic Information</h2>
-        Notes
+        <Notes member={member}/>
       </Tab>
     </Tabs>
   );
