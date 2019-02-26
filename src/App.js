@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
+  faBell,
+  faClock,
   faTimes,
   faSearch,
   faAllergies,
@@ -15,18 +17,25 @@ import {
   faVials,
   faPrescriptionBottleAlt
 } from '@fortawesome/free-solid-svg-icons'
+import {
+  faUserCircle
+} from '@fortawesome/free-regular-svg-icons'
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './views/Home';
 import ResetPassword from './views/ResetPassword';
 import Dashboard from './views/Dashboard';
+import Search from './views/Search';
 import MemberProfile from './views/MemberProfile';
 
 // Add font awesome icons to library for use in app.
 library.add(
+  faBell,
+  faClock,
   faTimes,
   faSearch,
+  faUserCircle,
   faAllergies,
   faFemale,
   faFileMedical,
@@ -72,6 +81,7 @@ class App extends Component {
               />
               <Route path='/reset-password' component={ResetPassword} />
               <Route path='/dashboard' component={Dashboard} />
+              <Route path='/search' component={Search} />
               <Route path='/member/:id' component={MemberProfile} />
               <Route render={function () {
                 return <p>Not Found</p>

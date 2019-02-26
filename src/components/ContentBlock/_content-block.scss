@@ -1,0 +1,36 @@
+.content-block {
+  padding: 2em 0;
+
+  svg {
+    margin-right: .5em;
+  }
+
+  ul {
+    margin: 0;
+    padding: .75em;
+  }
+
+  li {
+    list-style-type: none;
+    padding-bottom: 1em;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.content-block__title {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.content-block__content {
+  background-color: transparentize($blue, .8);
+  padding: 1em;
+}
+
+.content-block__link {
+  display: block;
+  text-align: right;
+}

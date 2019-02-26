@@ -13,14 +13,14 @@ const BasicInfo = ({ member }) => (
     <h3>Contact Information</h3>
     <ul>
       <li><strong>Email: </strong>{member.email}</li>
-      <li><strong>Phone Number: </strong>{member.phone}</li>
-      <li><strong>Address: </strong>{member.address}</li>
+      <li><strong>Phone Number: </strong>555-555-5555</li>
+      <li><strong>Address: </strong>"26 Fairway Blvd, Albany, NY"</li>
     </ul>
 
     <h3>Emergency Contact</h3>
     <ul>
-      <li><strong>Name: </strong>{member.eContactName}</li>
-      <li><strong>Phone: </strong>{member.eContactPhone}</li>
+      <li><strong>Name: </strong>Stephanie Walters</li>
+      <li><strong>Phone: </strong>555-555-5555</li>
     </ul>
 
     <ul>

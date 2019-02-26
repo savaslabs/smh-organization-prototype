@@ -12,6 +12,7 @@ $h5-font-size: 1rem;
 @import 'styles/helpers';
 
 // Import component styles.
+@import 'components/ContentBlock/content-block';
 @import 'components/Footer/footer';
 @import 'components/Header/header';
 @import 'components/Header/AccountMenu/account-menu';
