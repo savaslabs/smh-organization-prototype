@@ -6,7 +6,7 @@ import ContentBlock from '../../../components/ContentBlock';
 import members from '../../../data/members';
 
 const RecentMembers = () => {
-  const recentMembers = members.reverse().slice(0, 3);
+  const recentMembers = Object.assign([], members).reverse().slice(0, 3);
   return (
     <ContentBlock title='Recent Members' icon='clock' link='/search'>
       <ul>

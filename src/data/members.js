@@ -1,5 +1,5 @@
-const members = [
-  {
+const members = {
+  1: {
     id: 1,
     name: "Danielle Sloan",
     firstName: "Danielle",
@@ -8,9 +8,12 @@ const members = [
     age: "32",
     gender: "Female",
     email: "dsloan92@yahoo.com",
-    joined: "02/13/2019"
+    joined: "02/13/2019",
+    idVerified: false,
+    medVerified: false,
+    accessRecords: false,
   },
-  {
+  2: {
     id: 2,
     name: "Stephanie McNab",
     firstName: "Stephanie",
@@ -19,9 +22,12 @@ const members = [
     age: "64",
     gender: "Female",
     email: "smcnab@yahoo.com",
-    joined: "02/13/2019"
+    joined: "02/13/2019",
+    idVerified: true,
+    medVerified: true,
+    accessRecords: false,
   },
-  {
+  3: {
     id: 3,
     name: "Weston Smith",
     firstName: "Weston",
@@ -30,9 +36,12 @@ const members = [
     age: "72",
     gender: "Male",
     email: "wsmith@yahoo.com",
-    joined: "02/13/2019"
+    joined: "02/13/2019",
+    idVerified: true,
+    medVerified: false,
+    accessRecords: false,
   },
-  {
+  4: {
     id: 1,
     name: "Michael Tran",
     firstName: "Michael",
@@ -41,9 +50,12 @@ const members = [
     age: "32",
     gender: "Male",
     email: "mtran@yahoo.com",
-    joined: "02/23/2019"
+    joined: "02/23/2019",
+    idVerified: false,
+    medVerified: false,
+    accessRecords: false,
   },
-  {
+  5: {
     id: 5,
     name: "Dennis Arthur",
     firstName: "Dennis",
@@ -52,9 +64,12 @@ const members = [
     age: "64",
     gender: "Male",
     email: "darthur@yahoo.com",
-    joined: "02/24/2019"
+    joined: "02/24/2019",
+    idVerified: true,
+    medVerified: true,
+    accessRecords: true,
   },
-  {
+  6: {
     id: 6,
     name: "Joanna Fink",
     firstName: "Joanna",
@@ -63,8 +78,11 @@ const members = [
     age: "72",
     gender: "Female",
     email: "jfink@yahoo.com",
-    joined: "02/25/2019"
+    joined: "02/25/2019",
+    idVerified: false,
+    medVerified: false,
+    accessRecords: false,
   }
-];
+};
 
 export default members;

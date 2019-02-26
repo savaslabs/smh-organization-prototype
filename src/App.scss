@@ -9,6 +9,7 @@ $h5-font-size: 1rem;
 @import '~bootstrap/scss/bootstrap.scss';
 
 // Import global styles.
+@import 'styles/forms';
 @import 'styles/helpers';
 
 // Import component styles.

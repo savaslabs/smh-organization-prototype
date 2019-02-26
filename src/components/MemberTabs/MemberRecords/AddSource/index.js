@@ -22,7 +22,7 @@ const AddSource = () => (
         </thead>
         <tbody>
         {addSources.map((source, key) =>
-          <tr>
+          <tr key={key}>
             <td>{source.name}</td>
             <td>{source.dataType}</td>
             <td>

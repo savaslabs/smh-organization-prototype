@@ -17,8 +17,8 @@ const DataSources = () => (
         </tr>
       </thead>
       <tbody>
-      {dataSources.map(source =>
-        <tr>
+      {dataSources.map((source, key) =>
+        <tr key={key}>
           <td>{source.name}</td>
           <td>{source.dataType}</td>
           <td>{source.dateImported}</td>

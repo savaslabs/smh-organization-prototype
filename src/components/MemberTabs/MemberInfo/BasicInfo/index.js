@@ -14,7 +14,7 @@ const BasicInfo = ({ member }) => (
     <ul>
       <li><strong>Email: </strong>{member.email}</li>
       <li><strong>Phone Number: </strong>555-555-5555</li>
-      <li><strong>Address: </strong>"26 Fairway Blvd, Albany, NY"</li>
+      <li><strong>Address: </strong>26 Fairway Blvd, Albany, NY</li>
     </ul>
 
     <h3>Emergency Contact</h3>
