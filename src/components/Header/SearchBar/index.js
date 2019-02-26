@@ -7,6 +7,7 @@ class SearchBar extends Component {
     return (
       <Form inline className="nav-item form--search">
         <FontAwesomeIcon icon="search" />
+        <Form.Label className="sr-only sr-only-focusable">Search</Form.Label>
         <Form.Control type="text" placeholder="Search members" />
         <Button type="submit">Search</Button>
       </Form>

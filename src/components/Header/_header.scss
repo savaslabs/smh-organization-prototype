@@ -1,11 +1,11 @@
 .header {
   background-color: transparentize($blue, .8);
+  padding-bottom: 2em;
+  padding-top: 2em;
 
-  .navbar {
+  .container {
     align-items: center;
     display: flex;
-    padding-bottom: 2em;
-    padding-top: 2em;
   }
 
   // @todo: replace with logo?
@@ -16,6 +16,7 @@
   }
 
   .navbar-collapse {
+    align-items: center;
     flex-grow: 0;
     justify-content: flex-end;
   }

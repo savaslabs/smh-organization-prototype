@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import PropTypes from "prop-types";
 
-const LoginForm = (props) => {
+const LoginForm = ({ login }) => {
   return (
     <Form className="form--login">
       <Form.Group controlId="loginEmail">
@@ -17,7 +17,7 @@ const LoginForm = (props) => {
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
 
-      <Button variant="primary" type="submit" onClick={props.login}>
+      <Button variant="primary" type="submit" onClick={login}>
         Log In
       </Button>
 

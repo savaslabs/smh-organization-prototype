@@ -21,8 +21,8 @@ const CreateAccount = () => {
   )
 };
 
-const Header = (props) => {
-  if (props.auth) {
+const Header = ({ auth, logout }) => {
+  if (auth === '1') {
     return (
       <header className="header">
         <Navbar expand="lg" className="container">
@@ -33,7 +33,7 @@ const Header = (props) => {
             <Nav className="mr-auto">
               <CreateAccount />
               <AlertsMenu />
-              <AccountMenu auth = {props.auth} logout={props.logout}/>
+              <AccountMenu logout={logout}/>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -52,7 +52,7 @@ const Header = (props) => {
 };
 
 Header.propTypes = {
-  auth: PropTypes.bool.isRequired,
+  auth: PropTypes.string.isRequired,
   logout: PropTypes.func.isRequired
 };
 
