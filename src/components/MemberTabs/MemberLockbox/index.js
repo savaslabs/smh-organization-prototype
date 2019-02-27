@@ -7,6 +7,7 @@ const MemberLockbox = ({ member }) => {
   return (
     <Tabs defaultActiveKey="lockbox">
       <Tab eventKey="lockbox" title="Lockbox">
+        <h2 className="sr-only sr-only-focusable">Lockbox</h2>
         <BasicInfo member={member} />
       </Tab>
     </Tabs>

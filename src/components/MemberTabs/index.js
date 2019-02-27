@@ -1,3 +1,5 @@
+/* eslint-disable default-case */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import MemberInfo from './../../components/MemberTabs/MemberInfo';
@@ -5,8 +7,11 @@ import MemberId from './../../components/MemberTabs/MemberId';
 import MemberRecords from './../../components/MemberTabs/MemberRecords';
 import MemberNotes from './../../components/MemberTabs/MemberNotes';
 import MemberLockbox from './../../components/MemberTabs/MemberLockbox';
+import RequestAccess from './../../components/MemberTabs/RequestAccess';
 
-const MemberTabs = ({ member, active, idVerified, medVerified, accessRecords, updateMemberState }) => {
+const MemberTabs = (props) => {
+  const { member, active, idVerified, medVerified, accessRecords, updateMemberState } = props;
+
   const activeTab = (active) => {
     switch(active) {
       case 'memberId':
@@ -22,6 +27,14 @@ const MemberTabs = ({ member, active, idVerified, medVerified, accessRecords, up
         return <MemberNotes member={member} />;
       case 'memberLockbox':
         return <MemberLockbox member={member} />;
+      case 'requestAccess':
+        return (
+        <RequestAccess
+          member={member}
+          accessRecords={accessRecords}
+          updateMemberState={updateMemberState}
+        />
+      );
       default:
         return <MemberInfo member={member} />;
     }
@@ -40,7 +53,7 @@ MemberTabs.propTypes = {
   idVerified: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   medVerified: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   accessRecords: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  updateMemberState: PropTypes.func.isRequired
+  updateMemberState: PropTypes.func.isRequired,
 };
 
 export default MemberTabs;

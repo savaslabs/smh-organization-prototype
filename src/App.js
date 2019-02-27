@@ -51,20 +51,20 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      auth: localStorage.getItem('auth') || '0'
+      auth: localStorage.getItem('auth') || false
     };
     this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
   }
 
   login() {
-    localStorage.setItem('auth', '1');
-    this.setState({ auth: '1' })
+    localStorage.setItem('auth', 'true');
+    this.setState({ auth: 'true' })
   }
 
   logout() {
-    localStorage.setItem('auth', '0');
-    this.setState({ auth: '0' });
+    localStorage.setItem('auth', 'false');
+    this.setState({ auth: 'false' });
     return <Redirect to='/' />;
   }
 

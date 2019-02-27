@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 // @todo: May need to use link elements for buttons, or possibly add onClick
 // functions.
 const PageHeading = (props) => {
-  const href = props.ctaLink ? props.ctaLink : null;
   return (
     <div className="page-heading">
       <div className="container">
@@ -13,8 +12,8 @@ const PageHeading = (props) => {
         {props.subtitle &&
           <p className="page-heading__subtitle">{props.subtitle}</p>
         }
-        {props.ctaLink &&
-          <Button href={href} variant="light" className="page-heading__cta">{props.ctaText}</Button>
+        {props.ctaText &&
+          <Button variant="light" className="page-heading__cta" onClick={() => props.onSelect(props.ctaActiveTab)}>{props.ctaText}</Button>
         }
       </div>
     </div>
@@ -25,7 +24,8 @@ PageHeading.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   ctaText: PropTypes.string,
-  ctaLink: PropTypes.string
+  ctaActiveTab: PropTypes.string,
+  onSelect: PropTypes.func
 };
 
 export default PageHeading;

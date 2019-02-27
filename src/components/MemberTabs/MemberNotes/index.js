@@ -8,7 +8,7 @@ const MemberNotes = ({member}) => {
   return (
     <Tabs defaultActiveKey="notes">
       <Tab eventKey="notes" title="Notes">
-        <h2 className="sr-only sr-only-focusable">Basic Information</h2>
+        <h2 className="sr-only sr-only-focusable">Notes</h2>
         <Notes member={member}/>
       </Tab>
     </Tabs>

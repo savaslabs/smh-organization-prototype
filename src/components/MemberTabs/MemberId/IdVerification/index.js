@@ -35,7 +35,7 @@ const IdVerified = () => (
     <p><strong>Document Type</strong></p>
     <p>Driver's License</p>
     <p><strong>Expiration Date:</strong></p>
-    <p>02/13/2019</p>
+    <p>02/13/2020</p>
     <p><strong>Verification Details</strong></p>
     <p>Cheryl Deggins (Interfaith) verified this member’s identity on 2/13/2019.</p>
   </div>
