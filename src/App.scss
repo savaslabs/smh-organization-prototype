@@ -23,3 +23,7 @@ $h5-font-size: 1rem;
 @import 'components/PageHeading/page-heading';
 @import 'components/Sidebar/sidebar';
 @import 'components/MemberTabs/member-tabs';
+
+.app {
+  display: block;
+}
