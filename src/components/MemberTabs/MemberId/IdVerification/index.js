@@ -2,26 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button } from 'react-bootstrap';
 
-const IdUnverified = () => (
-  <Form>
-    <Form.Group controlId="verifyIdType">
-      <Form.Label>Document Type</Form.Label>
-      <Form.Control as="select">
-        <option>Driver's License</option>
-      </Form.Control>
-    </Form.Group>
-    <Form.Group controlId="verifyExpiration">
-      <Form.Label>Expiration Date</Form.Label>
-      <Form.Control type="text" placeholder="mm/dd/yyyy" />
-    </Form.Group>
-    <Form.Group controlId="verifyCertify">
-      <Form.Check type="checkbox" label="I certify that I can verify this member’s identity." />
-    </Form.Group>
-    <Button variant="primary" type="submit">
-      Verify
-    </Button>
-  </Form>
-);
+const IdUnverified = ({ memberId, idVerified, updateMemberState }) => {
+  const onClick = (e) => {
+    e.preventDefault();
+    updateMemberState(memberId, 'idVerified')
+  };
+
+  return (
+    <Form>
+      <Form.Group controlId="verifyIdType">
+        <Form.Label>Document Type</Form.Label>
+        <Form.Control as="select">
+          <option>Driver's License</option>
+        </Form.Control>
+      </Form.Group>
+      <Form.Group controlId="verifyExpiration">
+        <Form.Label>Expiration Date</Form.Label>
+        <Form.Control type="text" placeholder="mm/dd/yyyy" />
+      </Form.Group>
+      <Form.Group controlId="verifyCertify">
+        <Form.Check type="checkbox" label="I certify that I can verify this member’s identity." />
+      </Form.Group>
+      <Button variant="primary" type="submit" onClick={(e) => onClick(e)}>
+        Verify
+      </Button>
+    </Form>
+  );
+};
 
 const IdVerified = () => (
   <div>
@@ -34,12 +41,20 @@ const IdVerified = () => (
   </div>
 );
 
-const IdVerification = ({ idVerified }) => (
-  idVerified ? <IdVerified /> : <IdUnverified />
+const IdVerification = ({ memberId, idVerified, updateMemberState }) => (
+  idVerified
+    ? <IdVerified />
+    : <IdUnverified
+      memberId={memberId}
+      idVerified={idVerified}
+      updateMemberState={updateMemberState}
+    />
 );
 
 IdVerification.propTypes = {
-  idVerified: PropTypes.bool.isRequired
+  memberId: PropTypes.number.isRequired,
+  medVerified: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  updateMemberState: PropTypes.func.isRequired
 };
 
 export default IdVerification;
