@@ -1,3 +1,7 @@
-.form--search {
-  display: flex;
+.form--search--header {
+  input {
+    @extend .form-control;
+
+    width: auto;
+  }
 }

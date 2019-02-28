@@ -51,10 +51,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      auth: sessionStorage.getItem('auth') || false
+      auth: sessionStorage.getItem('auth') || false,
+      searchTerm: null
     };
+
     this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
+    this.search = this.search.bind(this);
   }
 
   login() {
@@ -68,20 +71,28 @@ class App extends Component {
     return <Redirect to='/' />;
   }
 
+  search(searchTerm) {
+    this.setState({ searchTerm: searchTerm });
+  }
+
   render() {
+    console.log(this.state.searchTerm);
     return (
       <Router>
         <div className='app'>
-          <Header auth={this.state.auth} logout={this.logout}/>
+          <Header auth={this.state.auth} logout={this.logout} search={this.search}/>
           <main>
             <Switch>
               <Route
                 exact path='/'
-                render={() => <Home auth={this.state.auth} login={this.login}/>}
+                render={(props) => <Home {...props} auth={this.state.auth} login={this.login}/>}
               />
               <Route path='/reset-password' component={ResetPassword} />
               <Route path='/dashboard' component={Dashboard} />
-              <Route path='/search' component={Search} />
+              <Route
+                path='/search'
+                render={(props) => <Search {...props} searchTerm={this.state.searchTerm}/>}
+              />
               <Route path='/member/:id' component={MemberProfile} />
               <Route render={function () {
                 return <p>Not Found</p>

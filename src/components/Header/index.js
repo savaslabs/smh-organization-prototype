@@ -21,7 +21,7 @@ const CreateAccount = () => {
   )
 };
 
-const Header = ({ auth, logout }) => {
+const Header = ({ auth, logout, search }) => {
   if (auth === 'true') {
     return (
       <header className="header">
@@ -29,7 +29,7 @@ const Header = ({ auth, logout }) => {
           <Logo />
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <SearchBar />
+            <SearchBar search={search}/>
             <Nav className="mr-auto">
               <CreateAccount />
               <AlertsMenu />
@@ -53,7 +53,8 @@ const Header = ({ auth, logout }) => {
 
 Header.propTypes = {
   auth: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-  logout: PropTypes.func.isRequired
+  logout: PropTypes.func.isRequired,
+  search: PropTypes.func.isRequired
 };
 
 export default Header;
