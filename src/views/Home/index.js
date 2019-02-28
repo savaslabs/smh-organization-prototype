@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom';
 import LoginForm from './../../components/LoginForm';
 
 const Home = ({ auth, login }) => {
-  if (auth === '1') {
+  if (auth === 'true') {
     return <Redirect to="/dashboard" />;
   }
 

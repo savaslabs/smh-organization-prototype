@@ -22,7 +22,7 @@ const CreateAccount = () => {
 };
 
 const Header = ({ auth, logout }) => {
-  if (auth === '1') {
+  if (auth === 'true') {
     return (
       <header className="header">
         <Navbar expand="lg" className="container">
