@@ -1,13 +1,13 @@
 {
-  "main.css": "/smh-organization-prototype/static/css/main.4fdeafda.chunk.css",
-  "main.js": "/smh-organization-prototype/static/js/main.2761a829.chunk.js",
-  "main.js.map": "/smh-organization-prototype/static/js/main.2761a829.chunk.js.map",
-  "runtime~main.js": "/smh-organization-prototype/static/js/runtime~main.222e5127.js",
-  "runtime~main.js.map": "/smh-organization-prototype/static/js/runtime~main.222e5127.js.map",
-  "static/js/2.2fc3021e.chunk.js": "/smh-organization-prototype/static/js/2.2fc3021e.chunk.js",
-  "static/js/2.2fc3021e.chunk.js.map": "/smh-organization-prototype/static/js/2.2fc3021e.chunk.js.map",
-  "index.html": "/smh-organization-prototype/index.html",
-  "precache-manifest.a4d5d599d62b10746fde02ac1efab6bd.js": "/smh-organization-prototype/precache-manifest.a4d5d599d62b10746fde02ac1efab6bd.js",
-  "service-worker.js": "/smh-organization-prototype/service-worker.js",
-  "static/css/main.4fdeafda.chunk.css.map": "/smh-organization-prototype/static/css/main.4fdeafda.chunk.css.map"
+  "main.css": "/static/css/main.4fdeafda.chunk.css",
+  "main.js": "/static/js/main.28876681.chunk.js",
+  "main.js.map": "/static/js/main.28876681.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.fdfcfda2.js",
+  "runtime~main.js.map": "/static/js/runtime~main.fdfcfda2.js.map",
+  "static/js/2.2fc3021e.chunk.js": "/static/js/2.2fc3021e.chunk.js",
+  "static/js/2.2fc3021e.chunk.js.map": "/static/js/2.2fc3021e.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.f42fee6960f0cacc4cb395ffc2fca393.js": "/precache-manifest.f42fee6960f0cacc4cb395ffc2fca393.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.4fdeafda.chunk.css.map": "/static/css/main.4fdeafda.chunk.css.map"
 }
