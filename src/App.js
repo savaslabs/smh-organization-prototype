@@ -15,7 +15,8 @@ import {
   faUsers,
   faSyringe,
   faVials,
-  faPrescriptionBottleAlt
+  faPrescriptionBottleAlt,
+  faArrowLeft
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faUserCircle
@@ -44,7 +45,8 @@ library.add(
   faUsers,
   faSyringe,
   faVials,
-  faPrescriptionBottleAlt
+  faPrescriptionBottleAlt,
+  faArrowLeft
 );
 
 class App extends Component {
