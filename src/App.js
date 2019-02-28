@@ -69,7 +69,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.auth);
     return (
       <Router>
         <div className='app'>
