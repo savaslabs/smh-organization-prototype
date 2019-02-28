@@ -13,22 +13,36 @@ class SearchBar extends Component {
 
     this.onChange = this.onChange.bind(this);
     this.onClick = this.onClick.bind(this);
+    this.onKeyPress = this.onKeyPress.bind(this);
   }
 
   onChange(e) {
     this.setState({ searchTerm: e.target.value });
   };
 
-  onClick(e) {
+  onClick() {
     this.props.search(this.state.searchTerm);
   };
+
+  onKeyPress(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      this.onClick();
+    }
+  }
 
   render() {
     return (
       <Form inline className="nav-item form--search form--search--header">
         <FontAwesomeIcon icon="search" />
         <Form.Label className="sr-only sr-only-focusable">Search</Form.Label>
-        <input type="text" placeholder="Search members" value={this.state.searchTerm} onChange={this.onChange}/>
+        <input
+          type="text"
+          placeholder="Search members"
+          value={this.state.searchTerm}
+          onChange={this.onChange}
+          onKeyPress={this.onKeyPress}
+        />
         <NavLink
           to='/search'
           onClick={this.onClick}

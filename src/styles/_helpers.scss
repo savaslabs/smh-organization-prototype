@@ -21,3 +21,17 @@
     padding-left: 2em;
   }
 }
+
+ul.list--formatted {
+  margin: 0;
+  padding: .75em;
+
+  li {
+    list-style-type: none;
+    padding-bottom: 1em;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}

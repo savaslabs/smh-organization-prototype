@@ -76,7 +76,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.searchTerm);
     return (
       <Router>
         <div className='app'>

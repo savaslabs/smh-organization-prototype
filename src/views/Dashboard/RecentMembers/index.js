@@ -1,20 +1,16 @@
 import React  from 'react';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import ContentBlock from '../../../components/ContentBlock';
+import UserLink from './../../../components/UserLink';
 import members from '../../../data/members';
 
 const RecentMembers = () => {
   const recentMembers = Object.assign([], members).reverse().slice(0, 3);
   return (
     <ContentBlock title='Recent Members' icon='clock' link='/search'>
-      <ul>
+      <ul className='list--formatted'>
         {recentMembers.map((member, index) =>
-          <li key={index}>
-            <FontAwesomeIcon icon={['far', 'user-circle']} />
-            <Link to={'/member/' + member.id}>{member.name}</Link>
-          </li>
+          <UserLink key={index} item={member}/>
         )}
       </ul>
     </ContentBlock>
