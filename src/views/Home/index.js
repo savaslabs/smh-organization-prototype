@@ -18,7 +18,7 @@ const Home = ({ auth, login }) => {
 };
 
 Home.propTypes = {
-  auth: PropTypes.string.isRequired,
+  auth: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   login: PropTypes.func.isRequired
 };
 

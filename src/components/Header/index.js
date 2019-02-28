@@ -52,7 +52,7 @@ const Header = ({ auth, logout }) => {
 };
 
 Header.propTypes = {
-  auth: PropTypes.string.isRequired,
+  auth: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   logout: PropTypes.func.isRequired
 };
 

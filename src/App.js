@@ -51,24 +51,25 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      auth: localStorage.getItem('auth') || false
+      auth: sessionStorage.getItem('auth') || false
     };
     this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
   }
 
   login() {
-    localStorage.setItem('auth', 'true');
+    sessionStorage.setItem('auth', 'true');
     this.setState({ auth: 'true' })
   }
 
   logout() {
-    localStorage.setItem('auth', 'false');
+    sessionStorage.setItem('auth', 'false');
     this.setState({ auth: 'false' });
     return <Redirect to='/' />;
   }
 
   render() {
+    console.log(this.state.auth);
     return (
       <Router>
         <div className='app'>

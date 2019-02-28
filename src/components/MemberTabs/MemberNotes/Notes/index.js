@@ -45,12 +45,12 @@ class Notes extends Component {
     notes.push(newNote);
 
     // Update local storage.
-    localStorage.setItem('notes' + id, JSON.stringify(notes));
+    sessionStorage.setItem('notes' + id, JSON.stringify(notes));
   };
 
   getMemberNotes() {
     const id = this.props.member.id;
-    return JSON.parse(localStorage.getItem('notes' + id));
+    return JSON.parse(sessionStorage.getItem('notes' + id));
   }
 
   render() {

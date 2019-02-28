@@ -54,7 +54,7 @@ class MemberProfile extends Component {
    * Check local storage for data, otherwise look in hardcoded array of members.
    */
   getInitialState(item, id) {
-    return localStorage.getItem(item + id) ? localStorage.getItem(item + id) : this.member[item];
+    return sessionStorage.getItem(item + id) ? sessionStorage.getItem(item + id) : this.member[item];
   }
 
   /**
@@ -65,10 +65,10 @@ class MemberProfile extends Component {
   }
 
   /**
-   * Add an item to localStorage to indicate step in verification processes.
+   * Add an item to sessionStorage to indicate step in verification processes.
    */
   updateMemberState = (id, item) => {
-    localStorage.setItem(item + id, 'true');
+    sessionStorage.setItem(item + id, 'true');
     this.setState({ [item]: 'true' });
   };
 
