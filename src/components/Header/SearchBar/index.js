@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
-import { Form } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: ''
+      searchTerm: '',
+      redirect: false
     };
 
     this.onChange = this.onChange.bind(this);
@@ -22,10 +23,11 @@ class SearchBar extends Component {
 
   onClick() {
     this.props.search(this.state.searchTerm);
+    this.setState({ redirect: true });
   };
 
   onKeyPress(e) {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' || e.keyCode === 13) {
       e.preventDefault();
       this.onClick();
     }
@@ -33,22 +35,23 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <Form inline className="nav-item form--search form--search--header">
-        <FontAwesomeIcon icon="search" />
-        <Form.Label className="sr-only sr-only-focusable">Search</Form.Label>
-        <input
-          type="text"
-          placeholder="Search members"
-          value={this.state.searchTerm}
-          onChange={this.onChange}
-          onKeyPress={this.onKeyPress}
-        />
-        <NavLink
-          to='/search'
-          onClick={this.onClick}
-          className='btn btn-primary'
-        >Search</NavLink>
-      </Form>
+      <div className="nav-item">
+        {this.state.redirect &&
+          <Redirect to='/search' />
+        }
+        <Form inline className="form--search form--search--header">
+          <FontAwesomeIcon icon="search" />
+          <Form.Label className="sr-only sr-only-focusable">Search</Form.Label>
+          <input
+            type="text"
+            placeholder="Search members"
+            value={this.state.searchTerm}
+            onChange={this.onChange}
+            onKeyPress={this.onKeyPress}
+          />
+          <Button onClick={this.onClick}>Search</Button>
+        </Form>
+      </div>
     );
   }
 

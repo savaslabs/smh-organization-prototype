@@ -96,7 +96,7 @@ class App extends Component {
               />
               <Route path='/member/:id' component={MemberProfile} />
               <Route render={function () {
-                return <p>Not Found</p>
+                return <p>Page Not Found</p>
               }} />
             </Switch>
           </main>
