@@ -10,8 +10,11 @@ const AccountMenu = ({ logout }) => {
   };
 
   return (
-    <NavDropdown title="Account">
-      <Navbar.Text href="/" onClick={onClick}><Link to="/">Dashboard</Link></Navbar.Text>
+    <NavDropdown
+      title={<img src="/images/avatars/admin.png" alt="Account menu icon" />}
+      className="notifications"
+    >
+      <Navbar.Text onClick={onClick}><Link to="/">Dashboard</Link></Navbar.Text>
       <NavDropdown.Divider />
       <Navbar.Text><a href="/">Settings</a></Navbar.Text>
       <NavDropdown.Divider />

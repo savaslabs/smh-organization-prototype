@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Navbar, Nav } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import SearchBar from './SearchBar';
 import AlertsMenu from './AlertsMenu';
 import AccountMenu from './AccountMenu';
 
-// @todo: Replace with logo img.
 const Logo = () => {
   return (
     <Navbar.Brand href="/">
@@ -16,8 +17,11 @@ const Logo = () => {
 
 const CreateAccount = () => {
   return (
-    <div className="nav-item">
-      <Button href="#" variant="primary">Create Account</Button>
+    <div className="nav-item nav-item--button">
+      <Button href="#" variant="primary">
+        <FontAwesomeIcon icon="plus" className="mr-1"/>
+        Create Account
+      </Button>
     </div>
   )
 };

@@ -3,6 +3,11 @@
   padding: .375rem 1rem;
 }
 
+input::placeholder {
+  color: $gray;
+  font-style: italic;
+}
+
 textarea {
   @extend .form-control;
 

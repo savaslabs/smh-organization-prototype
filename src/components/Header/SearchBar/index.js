@@ -35,12 +35,11 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="nav-item">
+      <div className="nav-item nav-item--search">
         {this.state.redirect &&
           <Redirect to='/search' />
         }
         <Form inline className="form--search form--search--header">
-          <FontAwesomeIcon icon="search" />
           <Form.Label className="sr-only sr-only-focusable">Search</Form.Label>
           <input
             type="text"
@@ -49,7 +48,7 @@ class SearchBar extends Component {
             onChange={this.onChange}
             onKeyPress={this.onKeyPress}
           />
-          <Button onClick={this.onClick}>Search</Button>
+          <Button onClick={this.onClick} className="button--reset"><FontAwesomeIcon icon="search" /></Button>
         </Form>
       </div>
     );

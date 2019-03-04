@@ -1,7 +1,7 @@
 .header {
   background-color: $blue;
-  padding-bottom: 2em;
-  padding-top: 2em;
+  padding-bottom: .5em;
+  padding-top: .5em;
 }
 
 .header--anon {
@@ -22,7 +22,6 @@
     font-size: 1em;
     margin: .5em 0 0;
     padding: 1em 2em 0;
-    text-transform: uppercase;
   }
 }
 
@@ -30,30 +29,47 @@
   .container {
     align-items: center;
     display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-nav {
+    align-items: center;
   }
 
   .navbar-collapse {
     align-items: center;
-    flex-grow: 0;
+    flex-grow: 1;
     justify-content: flex-end;
-  }
-
-  .nav-item {
-    padding: 0 1em;
-
-    &.form--search {
-      padding-left: 0;
-    }
   }
 
   // Common dropdown menu styles.
   .dropdown-menu {
     left: auto;
     min-width: 300px;
+    padding: .5em;
     right: 0;
+    width: 320px;
+
+    p {
+      margin-bottom: .25em;
+    }
+  }
+
+  .dropdown-toggle {
+    &::after {
+      display: none;
+    }
   }
 
   .navbar-text {
     padding: .5rem;
+  }
+}
+
+.nav-item--button {
+  padding: 0 1em;
+
+  .btn {
+    padding: .5em 1em;
   }
 }

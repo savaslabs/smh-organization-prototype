@@ -12,13 +12,19 @@
   display: flex;
   position: relative;
 
-  .fa-search {
-    left: 10px;
+  input {
+    padding-right: 2em;
+
+    @extend .form-control;
+  }
+
+  .btn {
+    right: .5em;
     position: absolute;
   }
 
-  input {
-    padding-left: 2em;
+  .fa-search {
+    color: $blue;
   }
 }
 
@@ -36,7 +42,11 @@ ul.list--formatted {
   }
 }
 
-.button--reset {
+.button--reset,
+.button--reset:hover,
+.button--reset:focus {
   background: 0;
   border: 0;
+  border-radius: 0;
+  padding: .5em;
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import PageHeading from './../../components/PageHeading';
 import UserLink from './../../components/UserLink';
 import members from './../../data/members';
 
@@ -31,7 +30,6 @@ class Search extends Component {
 
     return (
       <div>
-        <PageHeading title='Search Results'/>
         <div className='container'>
           {searchTerm &&
             <h2>Search results for "{searchTerm}"</h2>
