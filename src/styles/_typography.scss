@@ -1,0 +1,29 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  color: $gold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+p,
+li,
+form {
+  a {
+    border-bottom: .1em solid transparentize($gold, .9);
+    transition: all .2s ease;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid $gold;
+      color: $gold;
+      text-decoration: none;
+    }
+  }
+}
+
+small {
+  font-size: 90%;
+}

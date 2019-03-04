@@ -1,28 +1,27 @@
 // Override default bootstrap variables before the import.
-$h1-font-size: 2rem;
-$h2-font-size: 1.75rem;
-$h3-font-size: 1.5rem;
-$h4-font-size: 1.25rem;
-$h5-font-size: 1rem;
+@import 'styles/variables';
 
 // Import Bootstrap and its default variables.
 @import '~bootstrap/scss/bootstrap.scss';
 
 // Import global styles.
+@import 'styles/buttons';
 @import 'styles/forms';
+@import 'styles/global';
 @import 'styles/helpers';
+@import 'styles/typography';
 
 // Import component styles.
 @import 'components/ContentBlock/content-block';
-@import 'components/Footer/footer';
 @import 'components/Header/header';
 @import 'components/Header/AccountMenu/account-menu';
 @import 'components/Header/AlertsMenu/alerts-menu';
+@import 'components/LoginForm/login-form';
 @import 'components/MemberTabs/MemberRecords/Records/records';
 @import 'components/PageHeading/page-heading';
 @import 'components/Sidebar/sidebar';
 @import 'components/MemberTabs/member-tabs';
 
 .app {
-  display: block;
+  opacity: 1;
 }

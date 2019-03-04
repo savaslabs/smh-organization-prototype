@@ -1,0 +1,42 @@
+.auth--false {
+  background-color: $blue;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form--login {
+  color: $white;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  text-align: center;
+  width: 100%;
+
+  @include media-breakpoint-up(sm) {
+    width: 480px;
+  }
+
+  input::placeholder {
+    color: $gray;
+    font-style: italic;
+  }
+
+  p {
+    margin-bottom: .25em;
+  }
+
+  .btn {
+    margin-bottom: 2em;
+  }
+}
+
+.form--login__options {
+  display: flex;
+  justify-content: space-between;
+
+  .form-check-label {
+    font-size: 90%;
+  }
+}

@@ -1,18 +1,35 @@
 .header {
-  background-color: transparentize($blue, .8);
+  background-color: $blue;
   padding-bottom: 2em;
   padding-top: 2em;
+}
 
+.header--anon {
+  text-align: center;
+
+  @include media-breakpoint-up(sm) {
+    padding: 2em 0 6em;
+  }
+
+  a {
+    display: block;
+  }
+
+  &__heading {
+    border-top: 1px solid $white;
+    color: $white;
+    display: inline-block;
+    font-size: 1em;
+    margin: .5em 0 0;
+    padding: 1em 2em 0;
+    text-transform: uppercase;
+  }
+}
+
+.header--auth {
   .container {
     align-items: center;
     display: flex;
-  }
-
-  // @todo: replace with logo?
-  .navbar-brand {
-    color: $blue;
-    font-size: 1.5em;
-    margin-right: auto;
   }
 
   .navbar-collapse {

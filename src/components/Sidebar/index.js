@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 const Sidebar = ({ member, accessRecords, onSelect }) => {
   return (
     <div className="member-sidebar col-md-3">
-      <img src="/avatar.png" alt={member.name} className="member-avatar"/>
+      <img src="/images/avatar.png" alt={member.name} className="member-avatar"/>
       <Nav defaultActiveKey="memberInfo" className="flex-column" onSelect={(active) => onSelect(active)}>
         <Nav.Link eventKey="memberInfo">Basic Information</Nav.Link>
         <Nav.Link eventKey="memberId">Identification</Nav.Link>

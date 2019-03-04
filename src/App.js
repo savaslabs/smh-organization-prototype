@@ -23,7 +23,6 @@ import {
 } from '@fortawesome/free-regular-svg-icons'
 
 import Header from './components/Header';
-import Footer from './components/Footer';
 import Home from './views/Home';
 import ResetPassword from './views/ResetPassword';
 import Dashboard from './views/Dashboard';
@@ -80,7 +79,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className='app'>
+        <div className={'app auth--' + this.state.auth}>
           <Header auth={this.state.auth} logout={this.logout} search={this.search}/>
           <main>
             <Switch>
@@ -100,7 +99,6 @@ class App extends Component {
               }} />
             </Switch>
           </main>
-          <Footer />
         </div>
       </Router>
     );

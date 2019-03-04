@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'react-router-dom/Link';
 import PropTypes from 'prop-types';
 import { Button, Navbar, Nav } from 'react-bootstrap';
 import SearchBar from './SearchBar';
@@ -9,7 +8,9 @@ import AccountMenu from './AccountMenu';
 // @todo: Replace with logo img.
 const Logo = () => {
   return (
-    <Navbar.Brand href="/">Share My Health</Navbar.Brand>
+    <Navbar.Brand href="/">
+      <img src="/images/logo.png" alt="Share My Health Home" />
+    </Navbar.Brand>
   );
 };
 
@@ -24,7 +25,7 @@ const CreateAccount = () => {
 const Header = ({ auth, logout, search }) => {
   if (auth === 'true') {
     return (
-      <header className="header">
+      <header className="header header--auth">
         <Navbar expand="lg" className="container">
           <Logo />
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -42,10 +43,10 @@ const Header = ({ auth, logout, search }) => {
   }
 
   return (
-    <header className="header">
+    <header className="header header--anon">
       <div className="container">
         <Logo />
-        <Link to="/">Log In</Link>
+        <h1 className="header--anon__heading">Login</h1>
       </div>
     </header>
   );

@@ -10,9 +10,10 @@ const Home = ({ auth, login }) => {
   }
 
   return (
-    <div className="container mt-3 mb-3">
-      <h1>Agent Portal Log In</h1>
-      <LoginForm login={login}/>
+    <div className="home">
+      <div className="container">
+        <LoginForm login={login}/>
+      </div>
     </div>
   );
 };
