@@ -57,6 +57,7 @@ class MemberProfile extends Component {
           <div className='row'>
             <Sidebar
               member={member}
+              idVerified={idVerified}
               accessRecords={accessRecords}
               onSelect={this.onSelect}
             />

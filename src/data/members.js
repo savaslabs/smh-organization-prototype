@@ -278,6 +278,7 @@ const members = {
     idVerified: false,
     medVerified: false,
     accessRecords: false,
+    profileImage: "/images/avatars/sloan_large.png"
   }
 };
 
