@@ -20,12 +20,38 @@
   }
 }
 
+.member-sidebar__image {
+  position: relative;
+
+  .member-avatar__overlay {
+    background-color: transparentize($blue, .25);
+    bottom: .5em;
+    color: $white;
+    letter-spacing: 1px;
+    padding: .25em 1.5rem;
+    position: absolute;
+    width: 100%;
+
+    img {
+      margin-right: .5em;
+    }
+  }
+}
+
 .member-sidebar__nav {
-  h1 {
+  .member-sidebar__heading {
     @extend .heading-border;
 
     margin: 0 1.5rem 1rem;
     padding: 1rem 0;
+
+    p {
+      color: $gray;
+      margin-bottom: 0;
+    }
+  }
+
+  h1 {
     text-transform: none;
     word-break: break-word;
   }
