@@ -23,7 +23,9 @@ const RecentMembers = () => {
           <UserLink key={index} user={member}/>
         )}
       </ul>
-      <Button variant="primary" className="d-block mt-4 mx-auto">View All Members</Button>
+      <div className="text-center">
+        <Button variant="primary" className="mt-4" href="/search">View All Members</Button>
+      </div>
     </div>
   );
 };

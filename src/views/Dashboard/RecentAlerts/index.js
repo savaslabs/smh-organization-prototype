@@ -13,7 +13,9 @@ const RecentAlerts = () => (
         <Alert alert={alert} />
       </Tile>
     )}
-    <Button variant="primary" className="d-block mt-4 mx-auto">View All Notifications</Button>
+    <div className="text-center">
+      <Button variant="primary" className="mt-4">View All Notifications</Button>
+    </div>
   </div>
 );
 

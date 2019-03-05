@@ -4,12 +4,12 @@ const Alert = ({ alert }) => (
   <div className="alert-item">
     <img src={alert.image} alt="" className="alert-item__image"/>
     <div>
-      <p className="alert-item__text">{alert.alert}</p>
+      <div className="alert-item__text">{alert.alert}</div>
       {alert.time &&
-      <p className="alert-item__time">{alert.time}</p>
+      <div className="alert-item__time">{alert.time}</div>
       }
       {alert.action &&
-      <p className="alert-item__action">{alert.action}</p>
+      <div className="alert-item__action">{alert.action}</div>
       }
     </div>
   </div>
