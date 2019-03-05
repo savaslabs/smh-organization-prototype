@@ -6,9 +6,8 @@ import RecentMembers from './RecentMembers';
 class Dashboard extends Component {
   render () {
     return (
-      <div>
-        <div className="container">
-          <h2>Here is what you missed...</h2>
+      <div className="container mt-5 mb-5">
+        <div className="row">
           <RecentAlerts />
           <RecentMembers />
         </div>

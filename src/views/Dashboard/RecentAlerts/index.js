@@ -1,38 +1,20 @@
 import React  from 'react';
-import { Link } from 'react-router-dom';
-import { Table } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Button from 'react-bootstrap/Button';
 
-import ContentBlock from '../../../components/ContentBlock';
+import Tile from '../../../components/Tile';
+import Alert from '../../../components/Alert'
+import alerts from "../../../data/alerts";
 
 const RecentAlerts = () => (
-  <ContentBlock title='Notifications' icon='bell'>
-    <Table>
-      <tbody>
-      <tr>
-        <td>
-          <FontAwesomeIcon icon='bell' />
-          Housing Home left a note for <Link to='/member/5'>Dennis Arthur</Link>.
-        </td>
-        <td className='font-italic'>2 minutes ago</td>
-      </tr>
-      <tr>
-        <td>
-          <FontAwesomeIcon icon='bell' />
-          <Link to='/member/2'>Stephanie McNab</Link> hasn't accepted your request.
-        </td>
-        <td className='font-italic'>Send Reminder</td>
-      </tr>
-      <tr>
-        <td>
-          <FontAwesomeIcon icon='bell' />
-          <Link to='/member/3'>Weston Smith</Link> denied your request.
-        </td>
-        <td className='font-italic'>1 day ago</td>
-      </tr>
-      </tbody>
-    </Table>
-  </ContentBlock>
+  <div className="recent-alerts col-md-6 pr-4 pl-4">
+    <h2 className="text-center mb-3">Notifications</h2>
+    {alerts.map((alert, index) =>
+      <Tile key={index}>
+        <Alert alert={alert} />
+      </Tile>
+    )}
+    <Button variant="primary" className="d-block mt-4 mx-auto">View All Notifications</Button>
+  </div>
 );
 
 export default RecentAlerts;

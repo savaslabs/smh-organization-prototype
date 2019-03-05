@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, NavDropdown } from 'react-bootstrap';
 
+import Alert from './../../Alert';
 import alerts from './../../../data/alerts';
 
 const AlertsMenu = () => {
@@ -12,16 +13,7 @@ const AlertsMenu = () => {
       <h2>Recent Notifications</h2>
       {alerts.map((alert, index) =>
         <Navbar.Text key={index}>
-          <img src={alert.image} alt="" />
-          <div>
-            <p className="alert-item__text">{alert.alert}</p>
-            {alert.time &&
-              <p className="alert-item__time">{alert.time}</p>
-            }
-            {alert.action &&
-              <p className="alert-item__action">{alert.action}</p>
-            }
-          </div>
+          <Alert alert={alert} />
         </Navbar.Text>
       )}
     </NavDropdown>

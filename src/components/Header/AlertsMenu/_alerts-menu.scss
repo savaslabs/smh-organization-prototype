@@ -1,40 +1,14 @@
 .alerts {
   h2 {
-    font-size: 1em;
     padding: 1em 0;
     text-align: center;
   }
 
   .navbar-text {
     border-bottom: solid 1px $gray-200;
-    display: flex;
 
     &:last-child {
       border-bottom: 0;
     }
-
-    img {
-      height: 40px;
-      margin-right: .75em;
-      width: 40px;
-    }
   }
-}
-
-.alert-item__text {
-  color: $navy--dark;
-}
-
-.alert-item__time {
-  color: $gray;
-  font-size: 90%;
-  font-style: italic;
-}
-
-.alert-item__action {
-  color: $gold;
-  cursor: pointer;
-  font-weight: 500;
-  text-align: right;
-  text-transform: uppercase;
 }

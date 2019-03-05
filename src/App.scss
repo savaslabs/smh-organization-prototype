@@ -12,15 +12,18 @@
 @import 'styles/typography';
 
 // Import component styles.
-@import 'components/ContentBlock/content-block';
+@import 'components/Alert/alert';
 @import 'components/Header/header';
 @import 'components/Header/AccountMenu/account-menu';
 @import 'components/Header/AlertsMenu/alerts-menu';
 @import 'components/Header/SearchBar/search-bar';
 @import 'components/LoginForm/login-form';
+@import 'components/MemberTabs/member-tabs';
 @import 'components/MemberTabs/MemberRecords/Records/records';
 @import 'components/Sidebar/sidebar';
-@import 'components/MemberTabs/member-tabs';
+@import 'components/Tile/tile';
+@import 'views/Dashboard/RecentAlerts/recent-alerts';
+@import 'views/Dashboard/RecentMembers/recent-members';
 
 .app {
   opacity: 1;
