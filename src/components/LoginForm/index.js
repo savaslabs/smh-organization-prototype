@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 const LoginForm = ({ login }) => {
   return (
-    <Form className="form--login">
+    <Form className="form--login form--limit-width">
       <Form.Group controlId="loginEmail">
         <Form.Label className="sr-only sr-only-focusable">Email address</Form.Label>
         <Form.Control type="email" placeholder="Email" />

@@ -9,14 +9,8 @@
 
 .form--login {
   color: $white;
-  margin: 0 auto;
   padding-bottom: 2em;
   text-align: center;
-  width: 100%;
-
-  @include media-breakpoint-up(sm) {
-    width: 480px;
-  }
 
   p {
     margin-bottom: .25em;

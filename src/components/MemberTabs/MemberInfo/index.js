@@ -5,7 +5,7 @@ import BasicInfo from './BasicInfo';
 
 const MemberInfo = ({ member }) => (
   <div>
-    <h2>Basic Information</h2>
+    <h2 className="member-tabs__title">Basic Information</h2>
     <BasicInfo member={member} />
   </div>
 );

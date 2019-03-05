@@ -2,32 +2,6 @@
 // Helper classes.
 //
 
-.label--hidden {
-  label {
-    @include sr-only();
-  }
-}
-
-.form--search {
-  display: flex;
-  position: relative;
-
-  input {
-    padding-right: 2em;
-
-    @extend .form-control;
-  }
-
-  .btn {
-    right: .5em;
-    position: absolute;
-  }
-
-  .fa-search {
-    color: $blue;
-  }
-}
-
 ul.list--formatted {
   margin: 0;
   padding: .75em;

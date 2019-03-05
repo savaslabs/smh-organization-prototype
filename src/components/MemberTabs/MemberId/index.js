@@ -1,37 +1,62 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Tabs, Tab } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import IdVerification from "./IdVerification";
 import MedicalId from './MedicalId';
+import SubmitVerification from "./SubmitVerification";
 
-const MemberId = ({ member, idVerified, medVerified, updateMemberState }) => {
-  return (
-    <Tabs defaultActiveKey="idVerification">
-      <Tab eventKey="idVerification" title="ID Verification">
-        <h2 className="sr-only sr-only-focusable">ID Verification</h2>
-        <IdVerification
-          memberId={member.id}
-          idVerified={idVerified}
-          updateMemberState={updateMemberState}
-        />
-      </Tab>
-      <Tab eventKey="medicalId" title="Medical ID">
-        <h2 className="sr-only sr-only-focusable">Medical ID</h2>
-        <MedicalId
-          memberId={member.id}
-          medVerified={medVerified}
-          updateMemberState={updateMemberState}
-        />
-      </Tab>
-    </Tabs>
-  );
-};
+const TabTitle = ({ title }) => (
+  <div>
+    <h2>{title}</h2>
+    <hr />
+    <FontAwesomeIcon icon="circle" size="lg"/>
+  </div>
+);
+
+class MemberId extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      key: props.idVerified === 'true' ? 'verify' : 'idVerification'
+    };
+    this.goToTab = this.goToTab.bind(this);
+  }
+
+  goToTab(e, tab) {
+    e.preventDefault();
+    this.setState({ key: tab });
+  }
+
+  render() {
+    const { member, idVerified, verifyMember } = this.props;
+    const { key } = this.state;
+
+    return (
+      <Tabs activeKey={key} className="verify-form__tabs">
+        <Tab eventKey="idVerification" title={<TabTitle title="ID Verification" />}>
+          <IdVerification goToTab={this.goToTab} />
+        </Tab>
+        <Tab eventKey="medicalId" title={<TabTitle title="Medical ID" />}>
+          <MedicalId goToTab={this.goToTab} />
+        </Tab>
+        <Tab eventKey="verify" title={<TabTitle title="Verify" />}>
+          <SubmitVerification
+            memberId={member.id}
+            idVerified={idVerified}
+            verifyMember={verifyMember}
+          />
+        </Tab>
+      </Tabs>
+    );
+  }
+}
 
 MemberId.propTypes = {
   member: PropTypes.object.isRequired,
   idVerified: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  medVerified: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  updateMemberState: PropTypes.func.isRequired
+  verifyMember: PropTypes.func.isRequired
 };
 
 export default MemberId;

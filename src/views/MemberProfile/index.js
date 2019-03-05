@@ -13,13 +13,11 @@ class MemberProfile extends Component {
 
     this.state = {
       active: 'MemberInfo',
-      idVerified: this.member ? this.getInitialState('idVerified', id) : false,
-      medVerified: this.member ? this.getInitialState('medVerified', id) : false,
-      accessRecords: this.member ? this.getInitialState('accessRecords', id) : false,
+      idVerified: this.member ? this.getInitialState('idVerified', id) : false
     };
 
     this.onSelect = this.onSelect.bind(this);
-    this.updateMemberState = this.updateMemberState.bind(this);
+    this.verifyMember = this.verifyMember.bind(this);
   }
 
   /**
@@ -39,9 +37,9 @@ class MemberProfile extends Component {
   /**
    * Add an item to sessionStorage to indicate step in verification processes.
    */
-  updateMemberState = (id, item) => {
-    sessionStorage.setItem(item + id, 'true');
-    this.setState({ [item]: 'true' });
+  verifyMember = (id) => {
+    sessionStorage.setItem('idVerified' + id, 'true');
+    this.setState({ idVerified: 'true' });
   };
 
   render() {
@@ -50,7 +48,7 @@ class MemberProfile extends Component {
       return (<p>404 Not Found</p>);
     }
 
-    const { active, idVerified, medVerified, accessRecords } = this.state;
+    const { active, idVerified } = this.state;
     return (
       <div>
         <div className='container'>
@@ -58,16 +56,13 @@ class MemberProfile extends Component {
             <Sidebar
               member={member}
               idVerified={idVerified}
-              accessRecords={accessRecords}
               onSelect={this.onSelect}
             />
             <MemberTabs
               member={member}
               active={active}
               idVerified={idVerified}
-              medVerified={medVerified}
-              accessRecords={accessRecords}
-              updateMemberState={this.updateMemberState}
+              verifyMember={this.verifyMember}
             />
           </div>
         </div>

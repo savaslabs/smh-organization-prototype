@@ -8,10 +8,9 @@ import MemberId from './../../components/MemberTabs/MemberId';
 import MemberRecords from './../../components/MemberTabs/MemberRecords';
 import MemberNotes from './../../components/MemberTabs/MemberNotes';
 import MemberLockbox from './../../components/MemberTabs/MemberLockbox';
-import RequestAccess from './../../components/MemberTabs/RequestAccess';
 
 const MemberTabs = (props) => {
-  const { member, active, idVerified, medVerified, accessRecords, updateMemberState } = props;
+  const { member, active, idVerified, verifyMember } = props;
 
   const activeTab = (active) => {
     switch(active) {
@@ -19,8 +18,7 @@ const MemberTabs = (props) => {
         return <MemberId
           member={member}
           idVerified={idVerified}
-          medVerified={medVerified}
-          updateMemberState={updateMemberState}
+          verifyMember={verifyMember}
         />;
       case 'memberRecords':
         return <MemberRecords member={member} />;
@@ -28,14 +26,6 @@ const MemberTabs = (props) => {
         return <MemberNotes member={member} />;
       case 'memberLockbox':
         return <MemberLockbox member={member} />;
-      case 'requestAccess':
-        return (
-        <RequestAccess
-          member={member}
-          accessRecords={accessRecords}
-          updateMemberState={updateMemberState}
-        />
-      );
       default:
         return <MemberInfo member={member} />;
     }
@@ -52,9 +42,7 @@ MemberTabs.propTypes = {
   member: PropTypes.object.isRequired,
   active: PropTypes.string.isRequired,
   idVerified: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  medVerified: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  accessRecords: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  updateMemberState: PropTypes.func.isRequired,
+  verifyMember: PropTypes.func.isRequired,
 };
 
 export default MemberTabs;
