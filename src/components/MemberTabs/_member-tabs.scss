@@ -1,27 +1,9 @@
 .member-tabs {
-  .nav-tabs {
-    border: 0;
-    font-size: $h2-font-size;
-    margin-bottom: 0;
+  h2 {
+    @extend .heading-border;
 
-    a {
-      background-color: $white;
-      border-bottom: 0;
-      margin-bottom: 0;
-
-      &.active {
-        background-color: transparentize($blue, .8);
-      }
-    }
-  }
-
-  .tab-content {
-    background-color: transparentize($blue, .8);
-    padding: 1em;
-  }
-
-  h3 {
-    margin-top: 1em;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
   }
 
   ul {
@@ -30,5 +12,16 @@
 
   li {
     list-style-type: none;
+  }
+
+  dt {
+    color: $gray;
+    font-weight: 400;
+    margin-bottom: .25em;
+  }
+
+  dd {
+    font-size: $h2-font-size;
+    margin-bottom: 1.5rem;
   }
 }

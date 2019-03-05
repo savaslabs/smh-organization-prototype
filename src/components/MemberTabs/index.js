@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import MemberInfo from './../../components/MemberTabs/MemberInfo';
 import MemberId from './../../components/MemberTabs/MemberId';
 import MemberRecords from './../../components/MemberTabs/MemberRecords';
@@ -41,7 +42,7 @@ const MemberTabs = (props) => {
   };
 
   return (
-    <div className="member-tabs col-md-9">
+    <div className="member-tabs col-md-9 p-5">
       {activeTab(active)}
     </div>
   );
