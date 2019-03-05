@@ -51,7 +51,6 @@ class MemberProfile extends Component {
     }
 
     const { active, idVerified, medVerified, accessRecords } = this.state;
-    const subtitle = member.gender + ' | ' + member.age;
     return (
       <div>
         <div className='container'>

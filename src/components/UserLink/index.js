@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const UserLink = ({ user }) => (
-  <li>
+  <li className="user-link">
     <Link to={'/member/' + user.id}>
-      <img src={'/images/avatars/' + user.lastName.toLowerCase() + '.png'} alt={user.name} />
+      <img
+        src={'/images/avatars/' + user.lastName.toLowerCase() + '.png'}
+        alt={user.name}
+        className="mr-3"
+      />
       {user.name}
     </Link>
   </li>
