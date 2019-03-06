@@ -38,6 +38,13 @@
     right: 0;
     width: 320px;
 
+    &::after {
+      color: white;
+      content: '\25B2';
+      position: absolute;
+      top: -1em;
+    }
+
     p {
       margin-bottom: .25em;
     }

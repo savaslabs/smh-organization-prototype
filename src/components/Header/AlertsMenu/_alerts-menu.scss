@@ -6,4 +6,8 @@
       border-bottom: 0;
     }
   }
+
+  .dropdown-menu::after {
+    right: .5em;
+  }
 }

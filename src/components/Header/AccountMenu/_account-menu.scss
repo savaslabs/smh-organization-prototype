@@ -5,4 +5,8 @@
       text-decoration: none;
     }
   }
+
+  .dropdown-menu::after {
+    right: 1.1em;
+  }
 }

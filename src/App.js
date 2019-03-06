@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from "react-router-dom";
 import { Redirect } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -52,7 +52,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <HashRouter>
         <div className={'app auth--' + this.state.auth}>
           <Header auth={this.state.auth} logout={this.logout} search={this.search}/>
           <main>
@@ -80,7 +80,7 @@ class App extends Component {
             </Switch>
           </main>
         </div>
-      </Router>
+      </HashRouter>
     );
   }
 }
