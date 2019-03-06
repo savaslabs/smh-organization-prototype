@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import Tile from '../../../Tile';
-import Diagnoses from './Diagnoses';
-import Prescriptions from './Prescriptions';
+import Diagnoses from '../Diagnoses';
+import Prescriptions from '../Prescriptions';
 import records from '../../../../data/records';
 
 const ActiveRecord = ({ record, back }) => {

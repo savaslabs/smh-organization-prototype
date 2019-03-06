@@ -9,6 +9,10 @@ h3 {
   @extend .heading;
 }
 
+.subheading {
+  color: $gray;
+}
+
 a {
   color: $gold;
   text-decoration: none;

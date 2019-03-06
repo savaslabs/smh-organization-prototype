@@ -41,6 +41,10 @@
 .record-heading-wrapper {
   border-bottom: 2px solid $navy--border;
 
+  p {
+    margin-bottom: 0;
+  }
+
   button {
     color: $blue;
     font-weight: 500;
@@ -49,6 +53,8 @@
 }
 
 .table--records {
+  margin-top: 3em;
+
   th {
     border: 0;
     color: $gray;
