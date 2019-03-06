@@ -16,7 +16,8 @@ class MemberNotes extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ''
+      value: '',
+      newNotes: this.getMemberNotes()
     };
 
     this.onChange = this.onChange.bind(this);
@@ -42,10 +43,16 @@ class MemberNotes extends Component {
 
     // Get existing array of notes, or create a new array, then push new note.
     let notes = this.getMemberNotes() || [];
-    notes.push(newNote);
+    notes.unshift(newNote);
 
-    // Update local storage.
+    // Update session storage.
     sessionStorage.setItem('notes' + id, JSON.stringify(notes));
+
+    // Update state and clear textarea.
+    this.setState({
+      value: '',
+      newNotes: notes
+    })
   };
 
   getMemberNotes() {
@@ -55,7 +62,7 @@ class MemberNotes extends Component {
 
   render() {
     const { member } = this.props;
-    const notes = this.getMemberNotes();
+    const notes = this.state.newNotes;
 
     return (
       <div>
@@ -65,7 +72,7 @@ class MemberNotes extends Component {
             <Form.Label>Write a note about {member.name}</Form.Label>
             <textarea rows='3' value={this.state.value} onChange={this.onChange} />
           </Form.Group>
-          <Button variant='primary' type='submit' onClick={this.onClick}>
+          <Button variant='primary' onClick={this.onClick}>
             Submit
           </Button>
         </Form>

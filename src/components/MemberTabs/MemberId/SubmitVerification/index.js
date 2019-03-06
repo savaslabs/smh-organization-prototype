@@ -2,6 +2,9 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 
+/**
+ * Column of ID Verification info displayed on this pane.
+ */
 const IdInfo = (idVerified) => {
   const now = new Date();
   const date = now.getMonth() + '/' + now.getDate() + '/' + now.getFullYear();
@@ -25,6 +28,9 @@ const IdInfo = (idVerified) => {
   );
 };
 
+/**
+ * Column of Medical ID info displayed on this pane.
+ */
 const MedInfo = () => (
   <div className="col-sm-6">
     <h2 className="member-tabs__title">Medical ID</h2>
@@ -73,6 +79,9 @@ const SubmitComplete = () => (
   </Fragment>
 );
 
+/**
+ * Display submit form pre-ID verification, then display "verified!" pane.
+ */
 const SubmitVerification = ({ memberId, idVerified, verifyMember }) => (
   <div className="verify-form__submit">
     {idVerified === 'true' ? <SubmitComplete /> : <SubmitForm memberId={memberId} verifyMember={verifyMember}/>}

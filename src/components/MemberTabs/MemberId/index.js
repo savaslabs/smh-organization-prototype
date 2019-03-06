@@ -7,6 +7,9 @@ import IdVerification from "./IdVerification";
 import MedicalId from './MedicalId';
 import SubmitVerification from "./SubmitVerification";
 
+/**
+ * Tab titles have been styled to look like a progress bar.
+ */
 const TabTitle = ({ title }) => (
   <div>
     <h2>{title}</h2>
@@ -45,7 +48,7 @@ class MemberId extends Component {
     const { key } = this.state;
 
     return (
-      <Tabs activeKey={key} className="verify-form__tabs">
+      <Tabs activeKey={key} className="verify-form__tabs d-flex">
         <Tab eventKey="idVerification" title={<TabTitle title="ID Verification" />}>
           <IdVerification goToTab={this.goToTab} />
         </Tab>

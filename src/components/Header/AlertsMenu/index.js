@@ -10,7 +10,7 @@ const AlertsMenu = () => {
       title={<img src="/images/icons/bell.png" alt="Notifications menu icon" />}
       className="alerts"
     >
-      <h2>Recent Notifications</h2>
+      <h2 className="text-center pt-3 pb-3">Recent Notifications</h2>
       {alerts.map((alert, index) =>
         <Navbar.Text key={index}>
           <Alert alert={alert} />

@@ -35,7 +35,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="nav-item nav-item--search">
+      <div className="nav-item nav-item--search pr-3 pl-3">
         {this.state.redirect &&
           <Redirect to='/search' />
         }

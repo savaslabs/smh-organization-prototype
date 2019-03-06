@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 
+/**
+ * Step 2 in the ID verification process.
+ */
 const MedicalId = ({ goToTab }) => (
   <Form className="form--med-id form--limit-width mt-5 pt-5">
     <Row>

@@ -6,8 +6,6 @@
 }
 
 .header--anon {
-  text-align: center;
-
   @include media-breakpoint-up(sm) {
     padding: 2em 0 6em;
   }
@@ -27,24 +25,13 @@
 }
 
 .header--auth {
-  .container {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .navbar-nav {
-    align-items: center;
-  }
-
   .navbar-collapse {
-    align-items: center;
     flex-grow: 1;
-    justify-content: flex-end;
   }
 
-  // Common dropdown menu styles.
+  // Common header dropdown menu styles.
   .dropdown-menu {
+    color: $navy--dark;
     left: auto;
     min-width: 300px;
     padding: .5em;
@@ -67,9 +54,8 @@
   }
 }
 
+// "Create Account" button has different padding from standard buttons.
 .nav-item--button {
-  padding: 0 1em;
-
   .btn {
     padding: .5em 1em;
   }

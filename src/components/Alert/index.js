@@ -1,5 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
+/**
+ * A single notification.
+ */
 const Alert = ({ alert }) => (
   <div className="alert-item">
     <img src={alert.image} alt="" className="alert-item__image"/>
@@ -14,5 +18,9 @@ const Alert = ({ alert }) => (
     </div>
   </div>
 );
+
+Alert.propTypes = {
+  alert: PropTypes.object.isRequired
+};
 
 export default Alert;

@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button } from 'react-bootstrap';
 
+/**
+ * Step 1 in the ID verification process.
+ */
 const IdVerification = ({ goToTab }) => (
   <Form className="form--limit-width mt-5 pt-5">
     <Form.Group controlId="verifyIdType" className="mb-4">

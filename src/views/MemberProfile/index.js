@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+import PropTypes from "prop-types";
 
 import Sidebar from './../../components/Sidebar';
 import MemberTabs from './../../components/MemberTabs';
@@ -8,6 +10,7 @@ class MemberProfile extends Component {
   constructor(props) {
     super(props);
 
+    // Get member ID from URL query param.
     const id = this.props.match.params.id;
     this.member = members[id];
 
@@ -28,14 +31,14 @@ class MemberProfile extends Component {
   }
 
   /**
-   * Set active nav item, to be passed to tabs.
+   * Set active nav item, to be passed to member tabs.
    */
   onSelect(active) {
     this.setState({ active: active });
   }
 
   /**
-   * Add an item to sessionStorage to indicate step in verification processes.
+   * Add an item to sessionStorage to show member as ID-verified.
    */
   verifyMember = (id) => {
     sessionStorage.setItem('idVerified' + id, 'true');
@@ -43,6 +46,10 @@ class MemberProfile extends Component {
   };
 
   render() {
+    if (this.props.auth !== 'true') {
+      return <Redirect to="/" />;
+    }
+
     const member = this.member;
     if (!member) {
       return (<p>404 Not Found</p>);
@@ -70,5 +77,9 @@ class MemberProfile extends Component {
     );
   }
 }
+
+MemberProfile.propTypes = {
+  auth: PropTypes.oneOfType([PropTypes.string, PropTypes.bool])
+};
 
 export default MemberProfile;

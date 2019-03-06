@@ -17,7 +17,7 @@ const Logo = () => {
 
 const CreateAccount = () => {
   return (
-    <div className="nav-item nav-item--button">
+    <div className="nav-item nav-item--button pr-3 pl-3">
       <Button href="#" variant="primary">
         <FontAwesomeIcon icon="plus" className="mr-1"/>
         Create Account
@@ -30,12 +30,12 @@ const Header = ({ auth, logout, search }) => {
   if (auth === 'true') {
     return (
       <header className="header header--auth">
-        <Navbar expand="lg" className="container">
+        <Navbar expand="lg" className="container d-flex justify-content-between align-content-center">
           <Logo />
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
+          <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end align-items-center">
             <SearchBar search={search}/>
-            <Nav className="mr-auto">
+            <Nav className="mr-auto align-items-center">
               <CreateAccount />
               <AlertsMenu />
               <AccountMenu logout={logout}/>
@@ -47,7 +47,7 @@ const Header = ({ auth, logout, search }) => {
   }
 
   return (
-    <header className="header header--anon">
+    <header className="header header--anon text-center">
       <div className="container">
         <Logo />
         <h1 className="header--anon__heading">Login</h1>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Form } from 'react-bootstrap';
 
 const SearchHeading = ({ searchTerm, numResults, handleSort }) => (
-  <div className="search__heading pb-2">
+  <div className="search__heading d-flex justify-content-between align-items-center pb-2">
     <h2>{numResults} Search Results for "{searchTerm}"</h2>
     <Form className="mb-2" inline>
       <Form.Group controlId="sortOption">

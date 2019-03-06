@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 
 import SearchHeading from './SearchHeading';
 import SearchResults from './SearchResults';
@@ -48,6 +49,10 @@ class Search extends Component {
   }
 
   render() {
+    if (this.props.auth !== 'true') {
+      return <Redirect to="/" />;
+    }
+
     const { searchTerm } = this.props;
     const { sort } = this.state;
     const results = this.getResults();
@@ -73,6 +78,7 @@ class Search extends Component {
 }
 
 Search.propTypes = {
+  auth: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   searchTerm: PropTypes.string
 };
 
