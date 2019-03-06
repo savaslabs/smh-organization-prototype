@@ -6,7 +6,7 @@ import DataSources from './DataSources';
 
 const MemberRecords = () => {
   return (
-    <Tabs defaultActiveKey="records">
+    <Tabs defaultActiveKey="records" className="records-tabs">
       <Tab eventKey="records" title="Records">
         <h2 className="sr-only sr-only-focusable">Records</h2>
         <Records />
