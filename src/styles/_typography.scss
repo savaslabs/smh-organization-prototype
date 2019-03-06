@@ -4,9 +4,9 @@ body {
 }
 
 h1,
-h2 {
-  letter-spacing: 1px;
-  text-transform: uppercase;
+h2,
+h3 {
+  @extend .heading;
 }
 
 a {

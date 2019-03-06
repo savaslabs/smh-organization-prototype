@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Tile from '../../../Tile';
 import Diagnoses from './Diagnoses';
@@ -21,10 +20,13 @@ const ActiveRecord = ({ record, back }) => {
   const activeRecord = getActiveRecord();
   return (
     <div>
-      <button onClick={back} className='button--reset'>
-        <FontAwesomeIcon icon='arrow-left' className='mr-2' />
-        Back to All Records
-      </button>
+      <div className="record-heading-wrapper d-flex justify-content-between align-items-center pt-5 pb-2 mb-3">
+        <h2 className="m-0">{record.name}</h2>
+        <button onClick={back} className='button--reset'>
+          <img src="/images/icons/arrow-back.png" alt="" className="mr-2"/>
+          Go back to records
+        </button>
+      </div>
       {activeRecord}
     </div>
   );
