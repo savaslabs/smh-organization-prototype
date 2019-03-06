@@ -1,32 +1,29 @@
 import React from 'react';
-import { Table, Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import dataSources from '../../../../data/dataSources';
+import Tile from '../../../Tile';
 
 const DataSources = () => (
-  <div>
-    <h3>Current Data Sources</h3>
-    <Table striped bordered>
-      <thead>
-        <tr>
-          <th>Data Source Name</th>
-          <th>Data Type</th>
-          <th>Date Imported</th>
-          <th>Remove</th>
-        </tr>
-      </thead>
-      <tbody>
-      {dataSources.map((source, key) =>
-        <tr key={key}>
-          <td>{source.name}</td>
-          <td>{source.dataType}</td>
-          <td>{source.dateImported}</td>
-          <td><Button variant="light"><FontAwesomeIcon icon="times" /></Button></td>
-        </tr>
-      )}
-      </tbody>
-    </Table>
+  <div className="data-sources">
+    <div className="mt-5">
+      <h2>Current Data Sources</h2>
+      <div className="tile-flex">
+        <Tile className="tile-flex__item">
+          <img src="/images/icons/hixny.png" alt="" />
+          <p>Hixny</p>
+        </Tile>
+      </div>
+    </div>
+    <div className="mt-5 pt-5">
+      <h2>Available Data Sources</h2>
+      <div className="tile-flex">
+        {[...Array(8)].map((e, key) =>
+          <Tile className="tile-flex__item tile-flex__item--add" key={key}>
+            <img src="/images/icons/add.png" alt="" />
+            <p>Data Source {key + 1}</p>
+          </Tile>
+        )}
+      </div>
+    </div>
   </div>
 );
 

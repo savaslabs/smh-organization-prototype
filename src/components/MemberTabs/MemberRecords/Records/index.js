@@ -60,11 +60,11 @@ class Records extends Component {
     }
 
     return (
-      <div className="records__list">
+      <div className="tile-flex mt-5">
         {records.map((record, key) =>
           <Tile
             key={key}
-            className={'records__list__item' + (record.disabled ? ' disabled' : '')}
+            className={'tile-flex__item' + (record.disabled ? ' disabled' : '')}
             onClick={() => this.onClick(record)}
           >
             <img src={'/images/icons/' + record.icon + '.png'} alt='' />
