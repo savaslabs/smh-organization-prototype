@@ -25,3 +25,48 @@
     margin-bottom: 1.5rem;
   }
 }
+
+// Actual tab element, currently only used on Medical Data pane.
+.nav-tabs {
+  border-bottom: solid 2px $blue;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include media-breakpoint-up(md) {
+    flex-wrap: nowrap;
+  }
+
+  .nav-item {
+    background-color: transparentize($gray, .3);
+    border: 0;
+    border-radius: 0;
+    color: $white;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    margin-bottom: 0;
+    padding: .5em 3em;
+    text-align: center;
+    width: 100%;
+
+    &.active {
+      background-color: $blue;
+      border-radius: 0;
+      color: $white;
+    }
+
+    @include media-breakpoint-up(md) {
+      border-radius: 100px 100px 0 0;
+      padding: .5em 3em;
+      width: auto;
+
+      &.active {
+        border-radius: 100px 100px 0 0;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      line-height: 1.7;
+      padding: .5em 4em;
+    }
+  }
+}

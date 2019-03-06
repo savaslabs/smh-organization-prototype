@@ -2,20 +2,33 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Tile from '../../../Tile';
+import Diagnoses from './Diagnoses';
+import Prescriptions from './Prescriptions';
 import records from '../../../../data/records';
 
-const ActiveRecord = ({ record, back }) => (
-  <div>
-    <button onClick={back} className='button--reset'>
-      <FontAwesomeIcon icon='arrow-left' className='mr-2' />
-      Back to All Records
-    </button>
-    <div className='d-flex mt-3'>
-      <FontAwesomeIcon icon={record.icon} className='mr-2' size='2x' />
-      <h2>{record.name}</h2>
+const ActiveRecord = ({ record, back }) => {
+  const getActiveRecord = () => {
+    switch (record.name) {
+      case 'Diagnoses':
+        return <Diagnoses />;
+      case 'Prescriptions':
+        return <Prescriptions />;
+      default:
+        return <p>Record not found</p>;
+    }
+  };
+
+  const activeRecord = getActiveRecord();
+  return (
+    <div>
+      <button onClick={back} className='button--reset'>
+        <FontAwesomeIcon icon='arrow-left' className='mr-2' />
+        Back to All Records
+      </button>
+      {activeRecord}
     </div>
-  </div>
-);
+  );
+};
 
 class Records extends Component {
   constructor(props) {

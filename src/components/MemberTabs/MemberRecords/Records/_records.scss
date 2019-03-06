@@ -9,10 +9,15 @@
   background-color: $white;
   cursor: pointer;
   display: flex;
-  flex-basis: calc(25% - 15px);
+  flex-basis: 100%;
   flex-wrap: wrap;
   justify-content: center;
   margin: 7.5px;
+
+  @include media-breakpoint-up(sm) {
+    flex-basis: calc(25% - 15px);
+    min-width: 165px;
+  }
 
   &.disabled {
     cursor: default;

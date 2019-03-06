@@ -7,7 +7,7 @@ const Sidebar = ({ member, idVerified, onSelect }) => {
   const tabTitle = idVerified ? 'Identification' : 'Verify Identification';
 
   return (
-    <div className="member-sidebar col-md-3">
+    <div className="member-sidebar col-lg-3">
       <div className="member-sidebar__image">
         <img src={image} alt={member.name} className="member-avatar"/>
         {idVerified &&

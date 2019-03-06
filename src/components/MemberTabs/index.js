@@ -32,7 +32,7 @@ const MemberTabs = (props) => {
   };
 
   return (
-    <div className="member-tabs col-md-9 p-5">
+    <div className="member-tabs col-lg-9 p-5">
       {activeTab(active)}
     </div>
   );
