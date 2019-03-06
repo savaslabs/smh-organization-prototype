@@ -1,7 +1,7 @@
 .member-sidebar {
   background-color: $gray--light;
-  height: calc(100vh - 88px);
-  padding: 0;
+  min-height: calc(100vh - 88px);
+  padding: 0 0 3em;
 
   .nav-link {
     color: $navy--dark;

@@ -21,7 +21,7 @@ const MemberTabs = (props) => {
           verifyMember={verifyMember}
         />;
       case 'memberRecords':
-        return <MemberRecords member={member} />;
+        return <MemberRecords />;
       case 'memberNotes':
         return <MemberNotes member={member} />;
       case 'memberLockbox':

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import Tile from '../../../Tile';
 import records from '../../../../data/records';
 
 const ActiveRecord = ({ record, back }) => (
@@ -44,14 +45,21 @@ class Records extends Component {
     }
 
     return (
-      <ul className="records__list">
+      <div className="records__list">
         {records.map((record, key) =>
-          <li key={key} className="records__list__item" onClick={() => this.onClick(record)}>
-            <FontAwesomeIcon icon={record.icon} size="4x" />
-            <p>{record.name}</p>
-          </li>
+          <Tile
+            key={key}
+            className={'records__list__item' + (record.disabled ? ' disabled' : '')}
+            onClick={() => this.onClick(record)}
+          >
+            <img src={'/images/icons/' + record.icon + '.png'} alt='' />
+            <p>
+              {record.name}
+              {record.number && <span> ({record.number})</span>}
+            </p>
+          </Tile>
         )}
-      </ul>
+      </div>
     );
   }
 }
