@@ -9,9 +9,7 @@ const members = {
     gender: "Male",
     email: "darthur@yahoo.com",
     joined: "02/12/2019",
-    idVerified: true,
-    medVerified: true,
-    accessRecords: true,
+    idVerified: true
   },
   2: {
     id: 2,
@@ -24,8 +22,6 @@ const members = {
     email: "davender@yahoo.com",
     joined: "02/13/2019",
     idVerified: false,
-    medVerified: false,
-    accessRecords: false,
   },
   3: {
     id: 3,
@@ -38,8 +34,6 @@ const members = {
     email: "dbromine@yahoo.com",
     joined: "02/13/2019",
     idVerified: false,
-    medVerified: false,
-    accessRecords: false,
   },
   4: {
     id: 4,
@@ -51,9 +45,7 @@ const members = {
     gender: "Female",
     email: "dceleste@yahoo.com",
     joined: "02/23/2019",
-    idVerified: false,
-    medVerified: false,
-    accessRecords: false,
+    idVerified: false
   },
   5: {
     id: 5,
@@ -65,9 +57,7 @@ const members = {
     gender: "Female",
     email: "dcraven@yahoo.com",
     joined: "02/24/2019",
-    idVerified: false,
-    medVerified: false,
-    accessRecords: false,
+    idVerified: false
   },
   6: {
     id: 6,
@@ -79,9 +69,7 @@ const members = {
     gender: "Male",
     email: "rdeets@yahoo.com",
     joined: "02/25/2019",
-    idVerified: true,
-    medVerified: true,
-    accessRecords: true,
+    idVerified: true
   },
   7: {
     id: 7,
@@ -93,9 +81,7 @@ const members = {
     gender: "Male",
     email: "kfender@yahoo.com",
     joined: "02/24/2019",
-    idVerified: false,
-    medVerified: false,
-    accessRecords: false,
+    idVerified: false
   },
   8: {
     id: 8,
@@ -107,9 +93,7 @@ const members = {
     gender: "Female",
     email: "dflash@yahoo.com",
     joined: "02/24/2019",
-    idVerified: false,
-    medVerified: false,
-    accessRecords: false,
+    idVerified: false
   },
   9: {
     id: 9,
@@ -121,9 +105,7 @@ const members = {
     gender: "Female",
     email: "kgab@yahoo.com",
     joined: "02/24/2019",
-    idVerified: false,
-    medVerified: false,
-    accessRecords: false,
+    idVerified: false
   },
   10: {
     id: 10,
@@ -135,9 +117,7 @@ const members = {
     gender: "Female",
     email: "dhertz@yahoo.com",
     joined: "02/24/2019",
-    idVerified: false,
-    medVerified: false,
-    accessRecords: false,
+    idVerified: false
   },
   11: {
     id: 11,
@@ -149,9 +129,7 @@ const members = {
     gender: "Female",
     email: "dkratz@yahoo.com",
     joined: "02/24/2019",
-    idVerified: false,
-    medVerified: false,
-    accessRecords: false,
+    idVerified: false
   },
   12: {
     id: 12,
@@ -163,9 +141,7 @@ const members = {
     gender: "Female",
     email: "nlavendish@yahoo.com",
     joined: "02/24/2019",
-    idVerified: false,
-    medVerified: false,
-    accessRecords: false,
+    idVerified: false
   },
   13: {
     id: 13,
@@ -177,9 +153,7 @@ const members = {
     gender: "Female",
     email: "alender@yahoo.com",
     joined: "02/24/2019",
-    idVerified: true,
-    medVerified: true,
-    accessRecords: true,
+    idVerified: true
   },
   14: {
     id: 14,
@@ -191,9 +165,7 @@ const members = {
     gender: "Female",
     email: "smcnabb@yahoo.com",
     joined: "02/13/2019",
-    idVerified: true,
-    medVerified: true,
-    accessRecords: false,
+    idVerified: true
   },
   15: {
     id: 15,
@@ -205,9 +177,7 @@ const members = {
     gender: "Female",
     email: "dmendoza@yahoo.com",
     joined: "02/13/2019",
-    idVerified: false,
-    medVerified: false,
-    accessRecords: false,
+    idVerified: false
   },
   16: {
     id: 16,
@@ -219,9 +189,7 @@ const members = {
     gender: "Female",
     email: "dpowers@yahoo.com",
     joined: "02/13/2019",
-    idVerified: false,
-    medVerified: false,
-    accessRecords: false,
+    idVerified: false
   },
   17: {
     id: 17,
@@ -233,9 +201,7 @@ const members = {
     gender: "Male",
     email: "mthompson@yahoo.com",
     joined: "02/13/2019",
-    idVerified: false,
-    medVerified: false,
-    accessRecords: false,
+    idVerified: false
   },
   18: {
     id: 18,
@@ -247,9 +213,7 @@ const members = {
     gender: "Female",
     email: "dvine@yahoo.com",
     joined: "02/13/2019",
-    idVerified: false,
-    medVerified: false,
-    accessRecords: false,
+    idVerified: false
   },
   19: {
     id: 19,
@@ -261,9 +225,7 @@ const members = {
     gender: "Female",
     email: "swest@yahoo.com",
     joined: "02/13/2019",
-    idVerified: true,
-    medVerified: true,
-    accessRecords: true,
+    idVerified: true
   },
   20: {
     id: 20,
@@ -276,8 +238,6 @@ const members = {
     email: "dsloan92@yahoo.com",
     joined: "02/13/2019",
     idVerified: false,
-    medVerified: false,
-    accessRecords: false,
     profileImage: "/images/avatars/sloan_large.png"
   }
 };

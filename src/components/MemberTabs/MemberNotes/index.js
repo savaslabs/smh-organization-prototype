@@ -4,7 +4,7 @@ import { Form, Button} from 'react-bootstrap';
 
 const Note = ({ date, note, user }) => {
   return (
-    <li>
+    <li className="mt-5">
       <p className='note__date'>{date}</p>
       <p className='note__content'>{note}</p>
       <p className='note__user'>By {user}</p>

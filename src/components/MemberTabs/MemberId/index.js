@@ -19,9 +19,20 @@ class MemberId extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      key: props.idVerified === 'true' ? 'verify' : 'idVerification'
+      key: this.getActiveTab()
     };
+    this.getActiveTab = this.getActiveTab.bind(this);
     this.goToTab = this.goToTab.bind(this);
+  }
+
+  getActiveTab() {
+    // If member has been hardcoded as idVerified, show last tab.
+    if (this.props.member.idVerified) {
+      return 'verify';
+    }
+
+    // Use session storage item to determine which tab to show.
+    return this.props.idVerified === 'true' ? 'verify' : 'idVerification'
   }
 
   goToTab(e, tab) {
