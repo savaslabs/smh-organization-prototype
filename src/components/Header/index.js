@@ -33,13 +33,15 @@ const Header = ({ auth, logout, search }) => {
         <Navbar expand="lg" className="container d-flex justify-content-between align-content-center">
           <Logo />
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end align-items-center">
-            <SearchBar search={search}/>
-            <Nav className="mr-auto align-items-center">
-              <CreateAccount />
-              <AlertsMenu />
-              <AccountMenu logout={logout}/>
-            </Nav>
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <div className="navbar-nav__wrapper d-flex justify-content-end align-items-center">
+              <SearchBar search={search}/>
+              <Nav className="mr-auto align-items-center">
+                <CreateAccount />
+                <AlertsMenu />
+                <AccountMenu logout={logout}/>
+              </Nav>
+            </div>
           </Navbar.Collapse>
         </Navbar>
       </header>

@@ -1,4 +1,10 @@
 .account-menu {
+  padding: 0 1em;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+  }
+
   a {
     &:hover,
     &:focus {
@@ -7,6 +13,14 @@
   }
 
   .dropdown-menu::after {
-    right: 1.1em;
+    display: none;
+
+    @include media-breakpoint-up(sm) {
+      right: 1.625em;
+    }
+
+    @include media-breakpoint-up(lg) {
+      right: 1.1em;
+    }
   }
 }
