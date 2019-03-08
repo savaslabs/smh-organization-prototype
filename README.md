@@ -34,6 +34,12 @@ to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run deploy`
+
+Builds the app for production and deploys the site to GitHub Pages. See the
+deployment page linked above for info on configuring your own GH Pages instance
+or deploying in a different way.
+
 ## Directory Structure
 
 SCSS assets are coupled with their respective component JS files.
@@ -58,6 +64,11 @@ ul {
 
 Another exception is when Bootstrap components are used and it's not straightforward to add a class to and element in JSX.
 
+### Note on mobile styles
+
+Mobile styles are very preliminary and mostly meant to prevent the layout from
+breaking on small screens. These styles should be improved for the live app.
+
 ## User Experience
 
 ### Logging in and out
@@ -68,10 +79,14 @@ header, then "Log Out" to be returned to the home page as an unauthorized user.
 
 ### Forms
 
-Similarly, other forms do not actually require input. Clicking a submit button takes the user to the next step of the process or completes the form.
+Similarly, other forms do not actually require input. Clicking a submit button
+takes the user to the next step of the process or completes the form.
 
 ### Session Storage
 
-Some variables that keep track of where the user is in the user story are stored in session storage. Whether or not the user is "logged in" and whether or not members have had their ID verified are a couple of examples.
+Some variables that keep track of where the user is in the user story are stored
+in session storage. Whether or not the user is "logged in" and whether or not
+members have had their ID verified are a couple of examples.
 
-Opening a new tab and visiting the site will allow a user to start from scratch since all session storage items will be reset.
+Opening a new tab and visiting the site will allow a user to start from scratch
+since all session storage items will be reset.
