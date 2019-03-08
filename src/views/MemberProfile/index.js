@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import Sidebar from './../../components/Sidebar';
-import MemberTabs from './../../components/MemberTabs';
-import members from './../../data/members';
+import Sidebar from "./../../components/Sidebar";
+import MemberTabs from "./../../components/MemberTabs";
+import members from "./../../data/members";
 
 class MemberProfile extends Component {
   constructor(props) {
@@ -12,11 +12,11 @@ class MemberProfile extends Component {
 
     // Get member ID from URL query param.
     const id = this.props.match.params.id;
-    this.member = members[id];
 
     this.state = {
-      active: 'MemberInfo',
-      idVerified: this.member ? this.getInitialState('idVerified', id) : false
+      id: id,
+      active: "MemberInfo",
+      idVerified: MemberProfile.getInitialState(id)
     };
 
     this.onSelect = this.onSelect.bind(this);
@@ -24,10 +24,33 @@ class MemberProfile extends Component {
   }
 
   /**
+   * Update component if member ID in URL changes.
+   */
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.match.params.id !== prevState.id) {
+      const id = nextProps.match.params.id;
+      return {
+        id: id,
+        active: "MemberInfo",
+        idVerified: MemberProfile.getInitialState(id)
+      };
+    }
+
+    return null;
+  }
+
+  /**
    * Check local storage for data, otherwise look in hardcoded array of members.
    */
-  getInitialState(item, id) {
-    return sessionStorage.getItem(item + id) ? sessionStorage.getItem(item + id) : this.member[item];
+  static getInitialState(id) {
+    const member = members[id];
+    if (member) {
+      return sessionStorage.getItem("idVerified" + id)
+        ? sessionStorage.getItem("idVerified" + id)
+        : member["idVerified"];
+    }
+
+    return false;
   }
 
   /**
@@ -40,24 +63,24 @@ class MemberProfile extends Component {
   /**
    * Add an item to sessionStorage to show member as ID-verified.
    */
-  verifyMember = (id) => {
-    sessionStorage.setItem('idVerified' + id, 'true');
-    this.setState({ idVerified: 'true' });
+  verifyMember = id => {
+    sessionStorage.setItem("idVerified" + id, "true");
+    this.setState({ idVerified: "true" });
   };
 
   render() {
-    if (this.props.auth !== 'true') {
+    if (this.props.auth !== "true") {
       return <Redirect to="/" />;
     }
 
-    const member = this.member;
+    const { id, active, idVerified } = this.state;
+    const member = members[id];
     if (!member) {
-      return (<p>404 Not Found</p>);
+      return <p>404 Not Found</p>;
     }
 
-    const { active, idVerified } = this.state;
     return (
-      <div className='row'>
+      <div className="row">
         <Sidebar
           member={member}
           idVerified={idVerified}
