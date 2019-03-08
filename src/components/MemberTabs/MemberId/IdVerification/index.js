@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Form, Button } from 'react-bootstrap';
+import React from "react";
+import PropTypes from "prop-types";
+import { Form, Button } from "react-bootstrap";
 
 /**
  * Step 1 in the ID verification process.
@@ -18,14 +18,19 @@ const IdVerification = ({ goToTab }) => (
       <Form.Control type="text" placeholder="mm/dd/yyyy" />
     </Form.Group>
     <Form.Group controlId="verifyCertify" className="mb-5">
-      <Form.Check type="checkbox" label="I certify that I can verify this member’s identity." />
+      <Form.Check
+        type="checkbox"
+        label="I certify that I can verify this member’s identity."
+      />
     </Form.Group>
     <div className="text-center">
       <Button
         variant="primary"
         type="submit"
-        onClick={(e) => goToTab(e, 'medicalId')}
-      >Next</Button>
+        onClick={e => goToTab(e, "medicalId")}
+      >
+        Next
+      </Button>
     </div>
   </Form>
 );

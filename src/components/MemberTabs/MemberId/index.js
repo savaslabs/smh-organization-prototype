@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Tabs, Tab } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Tabs, Tab } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import IdVerification from "./IdVerification";
-import MedicalId from './MedicalId';
+import MedicalId from "./MedicalId";
 import SubmitVerification from "./SubmitVerification";
 
 /**
@@ -14,7 +14,7 @@ const TabTitle = ({ title }) => (
   <div>
     <h2>{title}</h2>
     <hr />
-    <FontAwesomeIcon icon="circle" size="lg"/>
+    <FontAwesomeIcon icon="circle" size="lg" />
   </div>
 );
 
@@ -31,11 +31,11 @@ class MemberId extends Component {
   getActiveTab() {
     // If member has been hardcoded as idVerified, show last tab.
     if (this.props.member.idVerified) {
-      return 'verify';
+      return "verify";
     }
 
     // Use session storage item to determine which tab to show.
-    return this.props.idVerified === 'true' ? 'verify' : 'idVerification'
+    return this.props.idVerified === "true" ? "verify" : "idVerification";
   }
 
   goToTab(e, tab) {
@@ -49,7 +49,10 @@ class MemberId extends Component {
 
     return (
       <Tabs activeKey={key} className="verify-form__tabs d-flex">
-        <Tab eventKey="idVerification" title={<TabTitle title="ID Verification" />}>
+        <Tab
+          eventKey="idVerification"
+          title={<TabTitle title="ID Verification" />}
+        >
           <IdVerification goToTab={this.goToTab} />
         </Tab>
         <Tab eventKey="medicalId" title={<TabTitle title="Medical ID" />}>

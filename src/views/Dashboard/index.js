@@ -1,14 +1,14 @@
-import React from 'react';
-import { Redirect } from 'react-router-dom';
+import React from "react";
+import { Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import RecentAlerts from './RecentAlerts';
-import RecentMembers from './RecentMembers';
+import RecentAlerts from "./RecentAlerts";
+import RecentMembers from "./RecentMembers";
 
 const Dashboard = ({ auth }) => {
-  if (auth !== 'true') {
+  if (auth !== "true") {
     return <Redirect to="/" />;
-}
+  }
   return (
     <div className="container mt-5 mb-5">
       <div className="row">
@@ -24,4 +24,3 @@ Dashboard.propTypes = {
 };
 
 export default Dashboard;
-

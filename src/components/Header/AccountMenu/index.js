@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Navbar, NavDropdown } from 'react-bootstrap';
-import PropTypes from 'prop-types';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Navbar, NavDropdown } from "react-bootstrap";
+import PropTypes from "prop-types";
 
 const AccountMenu = ({ logout }) => {
   // Fix a react-bootstrap bug; menu doesn't close when an item is clicked.
   const onClick = () => {
-    document.dispatchEvent(new MouseEvent('click'));
+    document.dispatchEvent(new MouseEvent("click"));
   };
 
   return (
@@ -14,11 +14,19 @@ const AccountMenu = ({ logout }) => {
       title={<img src="/images/avatars/admin.png" alt="Account menu icon" />}
       className="account-menu"
     >
-      <Navbar.Text onClick={onClick}><Link to="/">Dashboard</Link></Navbar.Text>
+      <Navbar.Text onClick={onClick}>
+        <Link to="/">Dashboard</Link>
+      </Navbar.Text>
       <NavDropdown.Divider />
-      <Navbar.Text><a href="/">Settings</a></Navbar.Text>
+      <Navbar.Text>
+        <a href="/">Settings</a>
+      </Navbar.Text>
       <NavDropdown.Divider />
-      <Navbar.Text><a href="/" onClick={logout}>Log Out</a></Navbar.Text>
+      <Navbar.Text>
+        <a href="/" onClick={logout}>
+          Log Out
+        </a>
+      </Navbar.Text>
     </NavDropdown>
   );
 };

@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Redirect } from 'react-router-dom';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Redirect } from "react-router-dom";
 
-import SearchHeading from './SearchHeading';
-import SearchResults from './SearchResults';
-import getResults from './../../utils/getResults';
+import SearchHeading from "./SearchHeading";
+import SearchResults from "./SearchResults";
+import getResults from "./../../utils/getResults";
 
 class Search extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class Search extends Component {
   }
 
   render() {
-    if (this.props.auth !== 'true') {
+    if (this.props.auth !== "true") {
       return <Redirect to="/" />;
     }
 
@@ -29,19 +29,19 @@ class Search extends Component {
     const results = getResults(searchTerm);
     const numResults = results.length;
 
-    if (sort && sort === 'Last Name Z-A') {
+    if (sort && sort === "Last Name Z-A") {
       results.reverse();
     }
 
     return (
-      <div className='search container mt-5 mb-5'>
-        {searchTerm &&
+      <div className="search container mt-5 mb-5">
+        {searchTerm && (
           <SearchHeading
             searchTerm={searchTerm}
-            numResults = {numResults}
+            numResults={numResults}
             handleSort={this.handleSort}
           />
-        }
+        )}
         <SearchResults results={results} />
       </div>
     );

@@ -21,7 +21,7 @@ const members = {
     gender: "Female",
     email: "davender@yahoo.com",
     joined: "02/13/2019",
-    idVerified: false,
+    idVerified: false
   },
   3: {
     id: 3,
@@ -33,7 +33,7 @@ const members = {
     gender: "Female",
     email: "dbromine@yahoo.com",
     joined: "02/13/2019",
-    idVerified: false,
+    idVerified: false
   },
   4: {
     id: 4,

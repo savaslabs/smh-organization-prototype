@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Modal } from 'react-bootstrap';
+import React from "react";
+import PropTypes from "prop-types";
+import { Modal } from "react-bootstrap";
 
 const PrescriptionModal = ({ show, handleClose, name }) => (
   <Modal show={show} onHide={handleClose} className="modal--records">
@@ -11,7 +11,9 @@ const PrescriptionModal = ({ show, handleClose, name }) => (
       <div className="modal__heading d-flex justify-content-between align-items-end pb-2 mb-4">
         <div>
           <h3>Prescription</h3>
-          <p className="subheading">Dr. Joseph Adams, MD | Albany Community Health Center</p>
+          <p className="subheading">
+            Dr. Joseph Adams, MD | Albany Community Health Center
+          </p>
         </div>
         <p className="modal__heading__links">Print | Download</p>
       </div>
@@ -38,7 +40,9 @@ const PrescriptionModal = ({ show, handleClose, name }) => (
         </dl>
         <dl>
           <dt>Address</dt>
-          <dd>123 Texas Ave.<br />Albany, NY</dd>
+          <dd>
+            123 Texas Ave.<br />Albany, NY
+          </dd>
         </dl>
       </div>
     </Modal.Body>

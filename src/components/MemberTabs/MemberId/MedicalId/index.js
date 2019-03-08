@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Form, Button, Row, Col } from 'react-bootstrap';
+import React from "react";
+import PropTypes from "prop-types";
+import { Form, Button, Row, Col } from "react-bootstrap";
 
 /**
  * Step 2 in the ID verification process.
@@ -12,7 +12,8 @@ const MedicalId = ({ goToTab }) => (
         <Form.Group controlId="verifyMedId">
           <Form.Label>Medical ID Number</Form.Label>
           <Form.Control type="text" placeholder="5A5-5A-5A5A-AA" />
-        </Form.Group>      </Col>
+        </Form.Group>
+      </Col>
       <Col>
         <Form.Group controlId="medIdType" className="mb-4">
           <Form.Label>ID Type</Form.Label>
@@ -31,8 +32,10 @@ const MedicalId = ({ goToTab }) => (
       <Button
         variant="primary"
         type="submit"
-        onClick={(e) => goToTab(e, 'verify')}
-      >Next</Button>
+        onClick={e => goToTab(e, "verify")}
+      >
+        Next
+      </Button>
     </div>
   </Form>
 );

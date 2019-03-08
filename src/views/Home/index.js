@@ -1,18 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Redirect } from 'react-router-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import { Redirect } from "react-router-dom";
 
-import LoginForm from './../../components/LoginForm';
+import LoginForm from "./../../components/LoginForm";
 
 const Home = ({ auth, login }) => {
-  if (auth === 'true') {
+  if (auth === "true") {
     return <Redirect to="/dashboard" />;
   }
 
   return (
     <div className="home">
       <div className="container">
-        <LoginForm login={login}/>
+        <LoginForm login={login} />
       </div>
     </div>
   );

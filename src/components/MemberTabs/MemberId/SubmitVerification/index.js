@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import { Button } from 'react-bootstrap';
+import React, { Fragment } from "react";
+import PropTypes from "prop-types";
+import { Button } from "react-bootstrap";
 
 /**
  * Column of ID Verification info displayed on this pane.
  */
-const IdInfo = (idVerified) => {
+const IdInfo = idVerified => {
   const now = new Date();
-  const date = now.getMonth() + '/' + now.getDate() + '/' + now.getFullYear();
+  const date = now.getMonth() + "/" + now.getDate() + "/" + now.getFullYear();
 
   return (
     <div className="col-sm-6">
@@ -17,12 +17,15 @@ const IdInfo = (idVerified) => {
         <dd>Driver's License</dd>
         <dt>Expiration Date</dt>
         <dd>09/23/2022</dd>
-        {idVerified &&
+        {idVerified && (
           <React.Fragment>
             <dt>Verification Details</dt>
-            <dd>Cheryl Deggins (Interfaith) verified this member's identity on {date}</dd>
+            <dd>
+              Cheryl Deggins (Interfaith) verified this member's identity on{" "}
+              {date}
+            </dd>
           </React.Fragment>
-        }
+        )}
       </dl>
     </div>
   );
@@ -43,16 +46,17 @@ const MedInfo = () => (
   </div>
 );
 
-
 const SubmitForm = ({ memberId, verifyMember }) => {
-  const onClick = (e) => {
+  const onClick = e => {
     e.preventDefault();
     verifyMember(memberId);
   };
 
   return (
     <Fragment>
-      <p className="text-center font-italic mt-5 mb-5">Review the information before submitting:</p>
+      <p className="text-center font-italic mt-5 mb-5">
+        Review the information before submitting:
+      </p>
       <div className="row">
         <IdInfo idVerified={false} />
         <MedInfo />
@@ -61,9 +65,11 @@ const SubmitForm = ({ memberId, verifyMember }) => {
         <Button
           variant="primary"
           type="submit"
-          onClick={(e) => onClick(e)}
+          onClick={e => onClick(e)}
           className="mt-5"
-        >Submit Verification</Button>
+        >
+          Submit Verification
+        </Button>
       </div>
     </Fragment>
   );
@@ -71,7 +77,9 @@ const SubmitForm = ({ memberId, verifyMember }) => {
 
 const SubmitComplete = () => (
   <Fragment>
-    <p className="verify-form__submit__success font-italic mt-5 mb-5">Member has been verified!</p>
+    <p className="verify-form__submit__success font-italic mt-5 mb-5">
+      Member has been verified!
+    </p>
     <div className="row">
       <IdInfo idVerified={true} />
       <MedInfo />
@@ -84,7 +92,11 @@ const SubmitComplete = () => (
  */
 const SubmitVerification = ({ memberId, idVerified, verifyMember }) => (
   <div className="verify-form__submit">
-    {idVerified === 'true' ? <SubmitComplete /> : <SubmitForm memberId={memberId} verifyMember={verifyMember}/>}
+    {idVerified === "true" ? (
+      <SubmitComplete />
+    ) : (
+      <SubmitForm memberId={memberId} verifyMember={verifyMember} />
+    )}
   </div>
 );
 

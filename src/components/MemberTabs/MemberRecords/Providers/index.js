@@ -1,9 +1,9 @@
-import React, { Component, Fragment } from 'react';
-import { Table } from 'react-bootstrap';
+import React, { Component, Fragment } from "react";
+import { Table } from "react-bootstrap";
 
-import PrescriptionModal from '../Prescriptions/PrescriptionModal';
-import DiagnosisModal from '../Diagnoses/DiagnosisModal';
-import providers from '../../../../data/providers';
+import PrescriptionModal from "../Prescriptions/PrescriptionModal";
+import DiagnosisModal from "../Diagnoses/DiagnosisModal";
+import providers from "../../../../data/providers";
 
 class ActiveProvider extends Component {
   constructor(props, context) {
@@ -14,7 +14,7 @@ class ActiveProvider extends Component {
 
     this.state = {
       showPrescription: false,
-      showDiagnosis: false,
+      showDiagnosis: false
     };
   }
 
@@ -35,45 +35,51 @@ class ActiveProvider extends Component {
             <h2>{record.name}</h2>
             <p className="subheading">{record.clinic}</p>
           </div>
-          <button onClick={back} className='button--reset'>
-            <img src="/images/icons/arrow-back.png" alt="" className="mr-2"/>
+          <button onClick={back} className="button--reset">
+            <img src="/images/icons/arrow-back.png" alt="" className="mr-2" />
             Go back to providers
           </button>
         </div>
         <h3>Associated Records</h3>
         <Table hover className="table--records">
           <thead>
-          <tr>
-            <th>Date</th>
-            <th>Record Name</th>
-            <th>Provider</th>
-          </tr>
+            <tr>
+              <th>Date</th>
+              <th>Record Name</th>
+              <th>Provider</th>
+            </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>{record.date}</td>
-            <td className="modal-link" onClick={() => this.handleShow('showPrescription')}>
-              Prescription: Betaxolo (Beta Blocker)
-            </td>
-            <td>{record.name}</td>
-          </tr>
-          <tr>
-            <td>{record.date}</td>
-            <td className="modal-link" onClick={() => this.handleShow('showDiagnosis')}>
-              High Blood Pressure
-            </td>
-            <td>{record.name}</td>
-          </tr>
+            <tr>
+              <td>{record.date}</td>
+              <td
+                className="modal-link"
+                onClick={() => this.handleShow("showPrescription")}
+              >
+                Prescription: Betaxolo (Beta Blocker)
+              </td>
+              <td>{record.name}</td>
+            </tr>
+            <tr>
+              <td>{record.date}</td>
+              <td
+                className="modal-link"
+                onClick={() => this.handleShow("showDiagnosis")}
+              >
+                High Blood Pressure
+              </td>
+              <td>{record.name}</td>
+            </tr>
           </tbody>
         </Table>
         <PrescriptionModal
           show={this.state.showPrescription}
-          handleClose={() => this.handleClose('showPrescription')}
+          handleClose={() => this.handleClose("showPrescription")}
           name={record.name}
         />
         <DiagnosisModal
           show={this.state.showDiagnosis}
-          handleClose={() => this.handleClose('showDiagnosis')}
+          handleClose={() => this.handleClose("showDiagnosis")}
           name={record.name}
         />
       </Fragment>
@@ -103,28 +109,28 @@ class Providers extends Component {
   render() {
     const { activeProvider } = this.state;
     if (activeProvider) {
-      return (
-        <ActiveProvider record={activeProvider} back={this.back}/>
-      )
+      return <ActiveProvider record={activeProvider} back={this.back} />;
     }
 
     return (
       <Table hover className="table--records">
         <thead>
-        <tr>
-          <th>Doctor's Name</th>
-          <th>Clinic</th>
-          <th>Date Last Seen</th>
-        </tr>
+          <tr>
+            <th>Doctor's Name</th>
+            <th>Clinic</th>
+            <th>Date Last Seen</th>
+          </tr>
         </thead>
         <tbody>
-        {providers.map((record, key) =>
-          <tr key={key}>
-            <td className="modal-link" onClick={() => this.onClick(record)}>{record.name}</td>
-            <td>{record.clinic}</td>
-            <td>{record.date}</td>
-          </tr>
-        )}
+          {providers.map((record, key) => (
+            <tr key={key}>
+              <td className="modal-link" onClick={() => this.onClick(record)}>
+                {record.name}
+              </td>
+              <td>{record.clinic}</td>
+              <td>{record.date}</td>
+            </tr>
+          ))}
         </tbody>
       </Table>
     );

@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Tile from '../../../Tile';
-import Diagnoses from '../Diagnoses';
-import Prescriptions from '../Prescriptions';
-import records from '../../../../data/records';
+import Tile from "../../../Tile";
+import Diagnoses from "../Diagnoses";
+import Prescriptions from "../Prescriptions";
+import records from "../../../../data/records";
 
 const ActiveRecord = ({ record, back }) => {
   const getActiveRecord = () => {
     switch (record.name) {
-      case 'Diagnoses':
+      case "Diagnoses":
         return <Diagnoses />;
-      case 'Prescriptions':
+      case "Prescriptions":
         return <Prescriptions />;
       default:
         return <p>Record not found</p>;
@@ -22,8 +22,8 @@ const ActiveRecord = ({ record, back }) => {
     <div>
       <div className="record-heading-wrapper d-flex justify-content-between align-items-center pt-5 pb-2 mb-3">
         <h2 className="m-0">{record.name}</h2>
-        <button onClick={back} className='button--reset'>
-          <img src="/images/icons/arrow-back.png" alt="" className="mr-2"/>
+        <button onClick={back} className="button--reset">
+          <img src="/images/icons/arrow-back.png" alt="" className="mr-2" />
           Go back to records
         </button>
       </div>
@@ -54,26 +54,24 @@ class Records extends Component {
   render() {
     const { activeRecord } = this.state;
     if (activeRecord) {
-      return (
-        <ActiveRecord record={activeRecord} back={this.back}/>
-      )
+      return <ActiveRecord record={activeRecord} back={this.back} />;
     }
 
     return (
       <div className="tile-flex mt-5">
-        {records.map((record, key) =>
+        {records.map((record, key) => (
           <Tile
             key={key}
-            className={'tile-flex__item' + (record.disabled ? ' disabled' : '')}
+            className={"tile-flex__item" + (record.disabled ? " disabled" : "")}
             onClick={() => this.onClick(record)}
           >
-            <img src={'/images/icons/' + record.icon + '.png'} alt='' />
+            <img src={"/images/icons/" + record.icon + ".png"} alt="" />
             <p>
               {record.name}
               {record.number && <span> ({record.number})</span>}
             </p>
           </Tile>
-        )}
+        ))}
       </div>
     );
   }

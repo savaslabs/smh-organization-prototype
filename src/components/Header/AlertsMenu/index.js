@@ -1,8 +1,8 @@
-import React from 'react';
-import { Navbar, NavDropdown } from 'react-bootstrap';
+import React from "react";
+import { Navbar, NavDropdown } from "react-bootstrap";
 
-import Alert from './../../Alert';
-import alerts from './../../../data/alerts';
+import Alert from "./../../Alert";
+import alerts from "./../../../data/alerts";
 
 const AlertsMenu = () => {
   return (
@@ -11,11 +11,11 @@ const AlertsMenu = () => {
       className="alerts"
     >
       <h2 className="text-center pt-3 pb-3">Recent Notifications</h2>
-      {alerts.map((alert, index) =>
+      {alerts.map((alert, index) => (
         <Navbar.Text key={index}>
           <Alert alert={alert} />
         </Navbar.Text>
-      )}
+      ))}
     </NavDropdown>
   );
 };

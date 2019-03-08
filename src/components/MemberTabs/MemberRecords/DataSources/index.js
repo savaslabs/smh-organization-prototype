@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import Tile from '../../../Tile';
+import Tile from "../../../Tile";
 
 const DataSources = () => (
   <div className="data-sources">
@@ -16,12 +16,12 @@ const DataSources = () => (
     <div className="mt-5 pt-5">
       <h2>Available Data Sources</h2>
       <div className="tile-flex">
-        {[...Array(8)].map((e, key) =>
+        {[...Array(8)].map((e, key) => (
           <Tile className="tile-flex__item tile-flex__item--add" key={key}>
             <img src="/images/icons/add.png" alt="" />
             <p>Data Source {key + 1}</p>
           </Tile>
-        )}
+        ))}
       </div>
     </div>
   </div>

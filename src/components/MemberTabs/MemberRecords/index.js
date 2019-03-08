@@ -1,9 +1,9 @@
-import React from 'react';
-import { Tabs, Tab } from 'react-bootstrap';
+import React from "react";
+import { Tabs, Tab } from "react-bootstrap";
 
-import Records from './Records';
-import Providers from './Providers';
-import DataSources from './DataSources';
+import Records from "./Records";
+import Providers from "./Providers";
+import DataSources from "./DataSources";
 
 const MemberRecords = () => (
   <Tabs defaultActiveKey="records" className="records-tabs">

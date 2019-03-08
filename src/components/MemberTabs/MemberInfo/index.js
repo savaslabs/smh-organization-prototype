@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import BasicInfo from './BasicInfo';
+import BasicInfo from "./BasicInfo";
 
 const MemberInfo = ({ member }) => (
   <div>

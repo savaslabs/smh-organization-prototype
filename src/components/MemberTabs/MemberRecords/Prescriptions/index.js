@@ -1,8 +1,8 @@
-import React, { Component, Fragment } from 'react';
-import { Table } from 'react-bootstrap';
+import React, { Component, Fragment } from "react";
+import { Table } from "react-bootstrap";
 
-import PrescriptionModal from './PrescriptionModal';
-import prescriptions from '../../../../data/prescriptions';
+import PrescriptionModal from "./PrescriptionModal";
+import prescriptions from "../../../../data/prescriptions";
 
 class Prescriptions extends Component {
   constructor(props, context) {
@@ -12,7 +12,7 @@ class Prescriptions extends Component {
     this.handleClose = this.handleClose.bind(this);
 
     this.state = {
-      show: false,
+      show: false
     };
   }
 
@@ -29,23 +29,29 @@ class Prescriptions extends Component {
       <Fragment>
         <Table hover className="table--records">
           <thead>
-          <tr>
-            <th>Date</th>
-            <th>Record Name</th>
-            <th>Pharmacy</th>
-          </tr>
+            <tr>
+              <th>Date</th>
+              <th>Record Name</th>
+              <th>Pharmacy</th>
+            </tr>
           </thead>
           <tbody>
-          {prescriptions.map((record, key) =>
-            <tr key={key}>
-              <td>{record.date}</td>
-              <td className="modal-link" onClick={this.handleShow}>{record.name}</td>
-              <td>{record.pharmacy}</td>
-            </tr>
-          )}
+            {prescriptions.map((record, key) => (
+              <tr key={key}>
+                <td>{record.date}</td>
+                <td className="modal-link" onClick={this.handleShow}>
+                  {record.name}
+                </td>
+                <td>{record.pharmacy}</td>
+              </tr>
+            ))}
           </tbody>
         </Table>
-        <PrescriptionModal show={this.state.show} handleClose={this.handleClose} name="Joseph Adams, MD" />
+        <PrescriptionModal
+          show={this.state.show}
+          handleClose={this.handleClose}
+          name="Joseph Adams, MD"
+        />
       </Fragment>
     );
   }

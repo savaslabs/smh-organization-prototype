@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Button, Navbar, Nav } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import PropTypes from "prop-types";
+import { Button, Navbar, Nav } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import SearchBar from './SearchBar';
-import AlertsMenu from './AlertsMenu';
-import AccountMenu from './AccountMenu';
+import SearchBar from "./SearchBar";
+import AlertsMenu from "./AlertsMenu";
+import AccountMenu from "./AccountMenu";
 
 const Logo = () => {
   return (
@@ -19,27 +19,30 @@ const CreateAccount = () => {
   return (
     <div className="nav-item nav-item--button pr-3 pl-3">
       <Button href="#" variant="primary">
-        <FontAwesomeIcon icon="plus" className="mr-1"/>
+        <FontAwesomeIcon icon="plus" className="mr-1" />
         Create Account
       </Button>
     </div>
-  )
+  );
 };
 
 const Header = ({ auth, logout, search }) => {
-  if (auth === 'true') {
+  if (auth === "true") {
     return (
       <header className="header header--auth">
-        <Navbar expand="lg" className="container d-flex justify-content-between align-content-center">
+        <Navbar
+          expand="lg"
+          className="container d-flex justify-content-between align-content-center"
+        >
           <Logo />
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <div className="navbar-nav__wrapper d-flex justify-content-end align-items-center">
-              <SearchBar search={search}/>
+              <SearchBar search={search} />
               <Nav className="mr-auto align-items-center">
                 <CreateAccount />
                 <AlertsMenu />
-                <AccountMenu logout={logout}/>
+                <AccountMenu logout={logout} />
               </Nav>
             </div>
           </Navbar.Collapse>
