@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
-import { Redirect } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faArrowLeft,
@@ -28,7 +27,6 @@ class App extends Component {
     };
 
     this.login = this.login.bind(this);
-    this.logout = this.logout.bind(this);
     this.search = this.search.bind(this);
   }
 
@@ -37,10 +35,8 @@ class App extends Component {
     this.setState({ auth: "true" });
   }
 
-  logout() {
+  static logout() {
     sessionStorage.setItem("auth", "false");
-    this.setState({ auth: "false" });
-    return <Redirect to="/" />;
   }
 
   search(searchTerm) {
@@ -53,7 +49,7 @@ class App extends Component {
         <div className={"app auth--" + this.state.auth}>
           <Header
             auth={this.state.auth}
-            logout={this.logout}
+            logout={App.logout}
             search={this.search}
           />
           <main>

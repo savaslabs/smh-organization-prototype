@@ -1,20 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 
 /**
  * Step 2 in the ID verification process.
  */
 const MedicalId = ({ goToTab }) => (
   <Form className="form--med-id form--limit-width mt-5 pt-5">
-    <Row>
-      <Col>
+    <div className="row">
+      <div className="col-sm">
         <Form.Group controlId="verifyMedId">
           <Form.Label>Medical ID Number</Form.Label>
           <Form.Control type="text" placeholder="5A5-5A-5A5A-AA" />
         </Form.Group>
-      </Col>
-      <Col>
+      </div>
+      <div className="col-sm">
         <Form.Group controlId="medIdType" className="mb-4">
           <Form.Label>ID Type</Form.Label>
           <Form.Control as="select">
@@ -22,8 +22,8 @@ const MedicalId = ({ goToTab }) => (
             <option>Medicaid</option>
           </Form.Control>
         </Form.Group>
-      </Col>
-    </Row>
+      </div>
+    </div>
     <Form.Group controlId="verifySsn" className="form--med-id__ssn mb-5">
       <Form.Label>Social Security Number</Form.Label>
       <Form.Control type="text" placeholder="555-55-5555" />

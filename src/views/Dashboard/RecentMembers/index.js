@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 import UserLink from "./../../../components/UserLink";
 import members from "../../../data/members";
@@ -24,9 +24,9 @@ const RecentMembers = () => {
         ))}
       </ul>
       <div className="text-center">
-        <Button variant="primary" className="mt-4" href="/search">
+        <Link className="btn btn-primary mt-4" to="/search">
           View All Members
-        </Button>
+        </Link>
       </div>
     </div>
   );
