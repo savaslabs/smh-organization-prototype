@@ -10,7 +10,7 @@ import AccountMenu from "./AccountMenu";
 const Logo = () => {
   return (
     <Navbar.Brand href="/">
-      <img src="/images/logo.png" alt="Share My Health Home" />
+      <img src="/images/logo.svg" alt="Share My Health Home" />
     </Navbar.Brand>
   );
 };
