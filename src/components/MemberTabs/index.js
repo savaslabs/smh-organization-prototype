@@ -24,7 +24,7 @@ const MemberTabs = props => {
           />
         );
       case "memberRecords":
-        return <MemberRecords />;
+        return <MemberRecords member={member} />;
       case "memberNotes":
         return <MemberNotes member={member} />;
       case "memberLockbox":

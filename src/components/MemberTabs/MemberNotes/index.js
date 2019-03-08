@@ -2,29 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Form, Button, Table } from "react-bootstrap";
 
-const Note = ({ date, note, user, userOrg }) => {
-  return (
-    <div className="note mb-5">
-      <Table hover className="table--records mt-2">
-        <thead>
-          <tr>
-            <th>Agent Name</th>
-            <th>Organization</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="modal-link">{user}</td>
-            <td>{userOrg}</td>
-            <td>{date}</td>
-          </tr>
-        </tbody>
-      </Table>
-      <p className="note__content pl-3">{note}</p>
-    </div>
-  );
-};
+import Note from "../Note";
 
 class MemberNotes extends Component {
   constructor(props) {
@@ -107,7 +85,7 @@ class MemberNotes extends Component {
           </Button>
         </Form>
 
-        <ul className="notes__list">
+        <div className="notes__list">
           {notes &&
             notes.map((note, key) => (
               <Note
@@ -120,10 +98,7 @@ class MemberNotes extends Component {
             ))}
           <Note
             date="2/26/2019"
-            note={
-              member.firstName +
-              " is food insecure and needs to be able to access the local pantry."
-            }
+            note={member.firstName + " visited today to have a general exam."}
             user="Cheryl Deggins"
             userOrg="Trinity Health"
           />
@@ -136,7 +111,7 @@ class MemberNotes extends Component {
             user="Cheryl Deggins"
             userOrg="Trinity Health"
           />
-        </ul>
+        </div>
       </div>
     );
   }
