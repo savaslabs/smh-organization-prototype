@@ -29,7 +29,7 @@ class ResetPassword extends Component {
             <Form.Label className="sr-only sr-only-focusable">
               Email address
             </Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control type="email" placeholder="Enter email" className="bg-white" />
           </Form.Group>
           <Button
             variant="primary"

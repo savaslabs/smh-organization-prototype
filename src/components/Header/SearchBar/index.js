@@ -50,6 +50,14 @@ class SearchBar extends Component {
     this.close = this.close.bind(this);
   }
 
+  componentDidMount(){
+    document.addEventListener("keydown", this.onKeyPress, false);
+  }
+
+  componentWillUnmount(){
+    document.removeEventListener("keydown", this.onKeyPress, false);
+  }
+
   onChange(e) {
     this.setState({ searchTerm: e.target.value });
   }
@@ -66,12 +74,16 @@ class SearchBar extends Component {
   }
 
   /**
-   * Handle enter keypress.
+   * Search on enter, close autocomplete on escape.
    */
   onKeyPress(e) {
     if (e.key === "Enter" || e.keyCode === 13) {
       e.preventDefault();
       this.onClick();
+    }
+    if (e.key === "Escape" || e.keyCode === 27) {
+      e.preventDefault();
+      this.close();
     }
   }
 
@@ -94,7 +106,7 @@ class SearchBar extends Component {
             placeholder="Search members"
             value={searchTerm}
             onChange={this.onChange}
-            onKeyPress={this.onKeyPress}
+            className="bg-white"
           />
           <Button onClick={this.onClick} className="button--reset">
             <FontAwesomeIcon icon="search" />

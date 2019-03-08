@@ -10,12 +10,12 @@ const LoginForm = ({ login }) => {
         <Form.Label className="sr-only sr-only-focusable">
           Email address
         </Form.Label>
-        <Form.Control type="email" placeholder="Email" />
+        <Form.Control type="email" placeholder="Email" className="bg-white" />
       </Form.Group>
 
       <Form.Group controlId="loginPassword">
         <Form.Label className="sr-only sr-only-focusable">Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+        <Form.Control type="password" placeholder="Password" className="bg-white" />
       </Form.Group>
 
       <Form.Group
