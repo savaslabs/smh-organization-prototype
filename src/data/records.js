@@ -1,11 +1,5 @@
 const records = [
   {
-    "name": "Allergies",
-    "icon": "allergies",
-    "disabled": false,
-    "number": 1,
-  },
-  {
     "name": "Diagnoses",
     "icon": "diagnoses",
     "disabled": false,
@@ -18,10 +12,14 @@ const records = [
     "number": 4,
   },
   {
+    "name": "Allergies",
+    "icon": "allergies",
+    "disabled": true,
+  },
+  {
     "name": "Procedures",
     "icon": "procedures",
-    "disabled": false,
-    "number": 2,
+    "disabled": true,
   },
   {
     "name": "ED Reports",

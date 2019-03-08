@@ -15,4 +15,8 @@ $navy--border: transparentize($navy, .9);
 $gray: #707070;
 $gray--light: #f3f3f6;
 $gray--medium: #e5e5e5;
+$black: #000;
 $table-border-color: $navy--border;
+
+// Other.
+$box-shadow--tile: transparentize($black, .84) 0 2px 10px;

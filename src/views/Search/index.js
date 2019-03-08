@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 
 import SearchHeading from './SearchHeading';
 import SearchResults from './SearchResults';
-import members from './../../data/members';
+import getResults from './../../utils/getResults';
 
 class Search extends Component {
   constructor(props) {
@@ -14,35 +14,6 @@ class Search extends Component {
     };
     this.handleSort = this.handleSort.bind(this);
   }
-
-  /**
-   * Return an array of members sorted alphabetically.
-   */
-  getResults() {
-    const { searchTerm } = this.props;
-    const memberArray = Object.assign([], members);
-    let results;
-
-    // If there's a search term return relevant results, otherwise all members.
-    if (!this.props.searchTerm) {
-      results = memberArray;
-    }
-    else {
-      results = memberArray.filter(function(member) {
-        if (member.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-          return member;
-        }
-        return null;
-      });
-    }
-
-    // Sort alphabetically.
-    results.sort(function(a, b) {
-      return a.lastName.localeCompare(b.lastName);
-    });
-
-    return results;
-  };
 
   handleSort(e) {
     this.setState({ sort: e.target.value });
@@ -55,7 +26,7 @@ class Search extends Component {
 
     const { searchTerm } = this.props;
     const { sort } = this.state;
-    const results = this.getResults();
+    const results = getResults(searchTerm);
     const numResults = results.length;
 
     if (sort && sort === 'Last Name Z-A') {

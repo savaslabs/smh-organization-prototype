@@ -1,3 +1,28 @@
 .nav-item--search {
   flex-grow: 1;
+  position: relative;
+}
+
+.search-autocomplete {
+  background-color: $white;
+  box-shadow: $box-shadow--tile;
+  color: $gray;
+  margin-left: 1em;
+  padding: .5em 1em;
+  position: absolute;
+  width: calc(100% - 4em);
+  z-index: 2;
+
+  .user-link {
+    padding: .25em 0;
+
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  .btn {
+    color: $blue;
+  }
 }
