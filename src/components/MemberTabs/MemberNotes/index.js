@@ -1,14 +1,28 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Table } from "react-bootstrap";
 
-const Note = ({ date, note, user }) => {
+const Note = ({ date, note, user, userOrg }) => {
   return (
-    <li className="mt-5">
-      <p className="note__date">{date}</p>
-      <p className="note__content">{note}</p>
-      <p className="note__user">By {user}</p>
-    </li>
+    <div className="note mb-5">
+      <Table hover className="table--records mt-2">
+        <thead>
+          <tr>
+            <th>Agent Name</th>
+            <th>Organization</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="modal-link">{user}</td>
+            <td>{userOrg}</td>
+            <td>{date}</td>
+          </tr>
+        </tbody>
+      </Table>
+      <p className="note__content pl-3">{note}</p>
+    </div>
   );
 };
 
@@ -38,7 +52,8 @@ class MemberNotes extends Component {
     const newNote = {
       date: now.getMonth() + "/" + now.getDate() + "/" + now.getFullYear(),
       note: this.state.value,
-      user: "Cheryl Sloan (Trinity Health)"
+      user: "Cheryl Deggins",
+      userOrg: "Trinity Health"
     };
 
     // Get existing array of notes, or create a new array, then push new note.
@@ -66,8 +81,19 @@ class MemberNotes extends Component {
 
     return (
       <div>
-        <h2 className="member-tabs__title">Notes</h2>
-        <Form className="mb-3">
+        <div className="heading-with-sort d-flex justify-content-between align-items-center pb-2 mb-3">
+          <h2>Recent Notes</h2>
+          <Form className="mb-2" inline>
+            <Form.Group controlId="sortOption">
+              <Form.Label className="mr-2 mb-0">Sort by</Form.Label>
+              <Form.Control as="select">
+                <option>Most Recent</option>
+              </Form.Control>
+            </Form.Group>
+          </Form>
+        </div>
+
+        <Form className="mb-5">
           <Form.Group controlId="newNote">
             <Form.Label>Write a note about {member.name}</Form.Label>
             <textarea
@@ -89,6 +115,7 @@ class MemberNotes extends Component {
                 date={note.date}
                 note={note.note}
                 user={note.user}
+                userOrg={note.userOrg}
               />
             ))}
           <Note
@@ -97,7 +124,8 @@ class MemberNotes extends Component {
               member.firstName +
               " is food insecure and needs to be able to access the local pantry."
             }
-            user="Cheryl Deggins (Trinity Health)"
+            user="Cheryl Deggins"
+            userOrg="Trinity Health"
           />
           <Note
             date="2/25/2019"
@@ -105,7 +133,8 @@ class MemberNotes extends Component {
               member.firstName +
               " is food insecure and needs to be able to access the local pantry."
             }
-            user="Cheryl Deggins (Trinity Health)"
+            user="Cheryl Deggins"
+            userOrg="Trinity Health"
           />
         </ul>
       </div>
