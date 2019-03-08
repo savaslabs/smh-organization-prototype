@@ -42,6 +42,7 @@ const Sidebar = ({ member, idVerified, onSelect }) => {
               <Nav.Link eventKey="memberRecords">Medical Data</Nav.Link>
               <Nav.Link eventKey="memberNotes">Notes</Nav.Link>
               <Nav.Link eventKey="memberLockbox">Lockbox</Nav.Link>
+              <Nav.Link eventKey="memberOrgs">Organizations</Nav.Link>
             </div>
           )}
         </Nav>

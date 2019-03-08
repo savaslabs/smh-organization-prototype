@@ -8,14 +8,13 @@ const PrescriptionModal = ({ show, handleClose, name }) => (
       <Modal.Title>View Record Detail</Modal.Title>
     </Modal.Header>
     <Modal.Body>
-      <div className="modal__heading d-flex justify-content-between align-items-end pb-2 mb-4">
+      <div className="modal__heading pb-2 mb-4">
         <div>
           <h3>Prescription</h3>
           <p className="subheading">
             Dr. Joseph Adams, MD | Albany Community Health Center
           </p>
         </div>
-        <p className="modal__heading__links">Print | Download</p>
       </div>
       <div className="d-flex flex-wrap">
         <dl>

@@ -1,11 +1,15 @@
 import React from "react";
-import { Button } from "react-bootstrap"
+import { Button } from "react-bootstrap";
 
 const Settings = () => (
   <div className="row mr-0 ml-0">
     <div className="member-sidebar col-lg-3 pl-0 pb-5 pr-0">
       <div className="member-sidebar__image">
-        <img src="/images/avatars/default.png" alt="Cheryl Deggins" className="member-avatar" />
+        <img
+          src="/images/avatars/default.png"
+          alt="Cheryl Deggins"
+          className="member-avatar"
+        />
       </div>
       <div className="member-sidebar__nav">
         <div className="member-sidebar__heading">
@@ -25,7 +29,9 @@ const Settings = () => (
         <dt>Member Since</dt>
         <dd>02/13/2019</dd>
       </dl>
-      <Button variant="primary" className="mt-4">Reset Password</Button>
+      <Button variant="primary" className="mt-4">
+        Reset Password
+      </Button>
     </div>
   </div>
 );

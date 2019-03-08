@@ -8,6 +8,7 @@ import MemberId from "./../../components/MemberTabs/MemberId";
 import MemberRecords from "./../../components/MemberTabs/MemberRecords";
 import MemberNotes from "./../../components/MemberTabs/MemberNotes";
 import MemberLockbox from "./../../components/MemberTabs/MemberLockbox";
+import MemberOrgs from "./../../components/MemberTabs/MemberOrgs";
 
 const MemberTabs = props => {
   const { member, active, idVerified, verifyMember } = props;
@@ -28,6 +29,8 @@ const MemberTabs = props => {
         return <MemberNotes member={member} />;
       case "memberLockbox":
         return <MemberLockbox member={member} />;
+      case "memberOrgs":
+        return <MemberOrgs />;
       default:
         return <MemberInfo member={member} />;
     }
