@@ -6,6 +6,15 @@
   position: relative;
 }
 
+// Logo.
+.navbar-brand {
+  img {
+    @include media-breakpoint-up(lg) {
+      width: 310px;
+    }
+  }
+}
+
 .header--anon {
   @include media-breakpoint-up(sm) {
     padding: 2em 0 6em;

@@ -5,7 +5,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faArrowLeft,
   faPlus,
-  faCircle
+  faCircle,
+  faSearch
 } from '@fortawesome/free-solid-svg-icons'
 
 import Header from './components/Header';
@@ -19,7 +20,8 @@ import MemberProfile from './views/MemberProfile';
 library.add(
   faArrowLeft,
   faPlus,
-  faCircle
+  faCircle,
+  faSearch
 );
 
 class App extends Component {

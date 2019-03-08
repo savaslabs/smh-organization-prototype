@@ -57,22 +57,18 @@ class MemberProfile extends Component {
 
     const { active, idVerified } = this.state;
     return (
-      <div>
-        <div className='container'>
-          <div className='row'>
-            <Sidebar
-              member={member}
-              idVerified={idVerified}
-              onSelect={this.onSelect}
-            />
-            <MemberTabs
-              member={member}
-              active={active}
-              idVerified={idVerified}
-              verifyMember={this.verifyMember}
-            />
-          </div>
-        </div>
+      <div className='row'>
+        <Sidebar
+          member={member}
+          idVerified={idVerified}
+          onSelect={this.onSelect}
+        />
+        <MemberTabs
+          member={member}
+          active={active}
+          idVerified={idVerified}
+          verifyMember={this.verifyMember}
+        />
       </div>
     );
   }

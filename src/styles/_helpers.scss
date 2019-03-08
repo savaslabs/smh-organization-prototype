@@ -7,6 +7,10 @@
   text-transform: uppercase;
 }
 
+.heading-border {
+  border-bottom: 2px solid $navy--border;
+}
+
 ul.list--formatted {
   margin: 0;
   padding: .75em;
@@ -28,8 +32,4 @@ ul.list--formatted {
   border: 0;
   border-radius: 0;
   padding: .5em;
-}
-
-.heading-border {
-  border-bottom: 2px solid $navy--border;
 }
