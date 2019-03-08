@@ -26,7 +26,7 @@ class Diagnoses extends Component {
   render() {
     return (
       <Fragment>
-        <Table hover className="table--records">
+        <Table hover responsive className="table--records">
           <thead>
             <tr>
               <th>Date</th>

@@ -9,7 +9,9 @@
 // Logo.
 .navbar-brand {
   img {
-    @include media-breakpoint-up(lg) {
+    width: 225px;
+
+    @include media-breakpoint-up(md) {
       width: 310px;
     }
   }

@@ -1,5 +1,10 @@
 .record-heading-wrapper {
   border-bottom: 2px solid $navy--border;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-up(sm) {
+    flex-wrap: nowrap;
+  }
 
   p {
     margin-bottom: 0;

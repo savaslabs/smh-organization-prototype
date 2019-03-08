@@ -80,7 +80,7 @@ class MemberProfile extends Component {
     }
 
     return (
-      <div className="row">
+      <div className="row mr-0 ml-0">
         <Sidebar
           member={member}
           idVerified={idVerified}

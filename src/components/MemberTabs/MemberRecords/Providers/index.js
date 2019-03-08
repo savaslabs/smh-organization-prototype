@@ -41,7 +41,7 @@ class ActiveProvider extends Component {
           </button>
         </div>
         <h3>Associated Records</h3>
-        <Table hover className="table--records">
+        <Table hover responsive className="table--records">
           <thead>
             <tr>
               <th>Date</th>

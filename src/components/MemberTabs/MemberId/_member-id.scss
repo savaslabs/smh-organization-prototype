@@ -8,9 +8,14 @@
     border: 0;
     color: transparentize($navy, .5);
     cursor: default;
+    display: none;
     flex-basis: 33.33%;
     padding: 0;
     text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
 
     // Style the circle indicator below each tab name.
     svg {

@@ -17,11 +17,12 @@
     display: none;
 
     @include media-breakpoint-up(sm) {
+      display: block;
       right: .875em;
     }
 
     @include media-breakpoint-up(lg) {
-      right: .5em;
+      right: calc(.5em - 1px);
     }
   }
 }

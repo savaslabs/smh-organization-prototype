@@ -16,6 +16,7 @@
     display: none;
 
     @include media-breakpoint-up(sm) {
+      display: block;
       right: 1.625em;
     }
 
