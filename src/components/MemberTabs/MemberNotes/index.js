@@ -97,7 +97,7 @@ class MemberNotes extends Component {
               member.firstName +
               " is food insecure and needs to be able to access the local pantry."
             }
-            user="Cheryl Sloan (Interfaith)"
+            user="Cheryl Deggins (Interfaith)"
           />
           <Note
             date="2/25/2019"
@@ -105,7 +105,7 @@ class MemberNotes extends Component {
               member.firstName +
               " is food insecure and needs to be able to access the local pantry."
             }
-            user="Cheryl Sloan (Interfaith)"
+            user="Cheryl Deggins (Interfaith)"
           />
         </ul>
       </div>

@@ -13,13 +13,14 @@ const AccountMenu = ({ logout }) => {
     <NavDropdown
       title={<img src="/images/avatars/admin.png" alt="Account menu icon" />}
       className="account-menu"
+      onClick={onClick}
     >
-      <Navbar.Text onClick={onClick}>
+      <Navbar.Text>
         <Link to="/">Dashboard</Link>
       </Navbar.Text>
       <NavDropdown.Divider />
       <Navbar.Text>
-        <a href="/">Settings</a>
+        <Link to="/settings">Settings</Link>
       </Navbar.Text>
       <NavDropdown.Divider />
       <Navbar.Text>

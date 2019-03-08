@@ -14,6 +14,7 @@ import ResetPassword from "./views/ResetPassword";
 import Dashboard from "./views/Dashboard";
 import Search from "./views/Search";
 import MemberProfile from "./views/MemberProfile";
+import Settings from "./views/Settings";
 
 // Add font awesome icons to library for use in app.
 library.add(faArrowLeft, faPlus, faCircle, faSearch);
@@ -84,6 +85,7 @@ class App extends Component {
                   <MemberProfile {...props} auth={this.state.auth} />
                 )}
               />
+              <Route path="/settings" component={Settings} />
               <Route
                 render={function() {
                   return <h1 className="text-center mt-5">Page Not Found</h1>;
