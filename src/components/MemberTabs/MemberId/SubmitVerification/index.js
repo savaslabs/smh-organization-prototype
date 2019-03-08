@@ -21,7 +21,7 @@ const IdInfo = idVerified => {
           <React.Fragment>
             <dt>Verification Details</dt>
             <dd>
-              Cheryl Deggins (Interfaith) verified this member's identity on{" "}
+              Cheryl Deggins (Trinity Health) verified this member's identity on{" "}
               {date}
             </dd>
           </React.Fragment>

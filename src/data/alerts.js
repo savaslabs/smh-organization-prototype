@@ -24,7 +24,7 @@ const alerts = [
   {
     alert: (
       <p>
-        <strong>Interfaith</strong> left a note for{" "}
+        <strong>Trinity Health</strong> left a note for{" "}
         <strong>Dennis Arthur</strong>
       </p>
     ),

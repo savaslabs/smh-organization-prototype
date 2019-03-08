@@ -38,7 +38,7 @@ class MemberNotes extends Component {
     const newNote = {
       date: now.getMonth() + "/" + now.getDate() + "/" + now.getFullYear(),
       note: this.state.value,
-      user: "Cheryl Sloan (Interfaith)"
+      user: "Cheryl Sloan (Trinity Health)"
     };
 
     // Get existing array of notes, or create a new array, then push new note.
@@ -97,7 +97,7 @@ class MemberNotes extends Component {
               member.firstName +
               " is food insecure and needs to be able to access the local pantry."
             }
-            user="Cheryl Deggins (Interfaith)"
+            user="Cheryl Deggins (Trinity Health)"
           />
           <Note
             date="2/25/2019"
@@ -105,7 +105,7 @@ class MemberNotes extends Component {
               member.firstName +
               " is food insecure and needs to be able to access the local pantry."
             }
-            user="Cheryl Deggins (Interfaith)"
+            user="Cheryl Deggins (Trinity Health)"
           />
         </ul>
       </div>

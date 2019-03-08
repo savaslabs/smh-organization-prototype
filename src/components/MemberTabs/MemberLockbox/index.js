@@ -17,11 +17,11 @@ const MemberLockbox = () => (
     </div>
     <Table hover responsive className="table--records">
       <thead>
-      <tr>
-        <th>File</th>
-        <th>Uploaded By</th>
-        <th>Date</th>
-      </tr>
+        <tr>
+          <th>File</th>
+          <th>Uploaded By</th>
+          <th>Date</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
@@ -36,10 +36,10 @@ const MemberLockbox = () => (
         </tr>
       </tbody>
     </Table>
-    <Button variant="primary" className="mt-5">Upload File</Button>
+    <Button variant="primary" className="mt-5">
+      Upload File
+    </Button>
   </div>
-
-
 );
 
 MemberLockbox.propTypes = {

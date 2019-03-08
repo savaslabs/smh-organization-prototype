@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from "react";
-import { Table } from "react-bootstrap";
+import { Table, Form } from "react-bootstrap";
 
 import PrescriptionModal from "../Prescriptions/PrescriptionModal";
 import DiagnosisModal from "../Diagnoses/DiagnosisModal";
 import providers from "../../../../data/providers";
+import providersSocial from "../../../../data/providersSocial";
 
 class ActiveProvider extends Component {
   constructor(props, context) {
@@ -113,15 +114,56 @@ class Providers extends Component {
     }
 
     return (
-      <Table hover className="table--records">
-        <thead>
+      <Fragment>
+        <div className="heading-with-sort d-flex justify-content-between align-items-center mt-5 mb-3">
+          <h2>Social Providers</h2>
+          <Form className="mb-2" inline>
+            <Form.Group controlId="sortOption">
+              <Form.Label className="mr-2 mb-0">Sort by</Form.Label>
+              <Form.Control as="select">
+                <option>Most Recent</option>
+              </Form.Control>
+            </Form.Group>
+          </Form>
+        </div>
+        <Table hover className="table--records mt-2">
+          <thead>
+            <tr>
+              <th>Agent Name</th>
+              <th>Organization</th>
+              <th>Date Last Seen</th>
+            </tr>
+          </thead>
+          <tbody>
+            {providersSocial.map((record, key) => (
+              <tr key={key}>
+                <td className="modal-link">{record.name}</td>
+                <td>{record.clinic}</td>
+                <td>{record.date}</td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+        <div className="heading-with-sort d-flex justify-content-between align-items-center mt-5 mb-3">
+          <h2>Physician Providers</h2>
+          <Form className="mb-2" inline>
+            <Form.Group controlId="sortOption">
+              <Form.Label className="mr-2 mb-0">Sort by</Form.Label>
+              <Form.Control as="select">
+                <option>Most Recent</option>
+              </Form.Control>
+            </Form.Group>
+          </Form>
+        </div>
+        <Table hover className="table--records mt-2">
+          <thead>
           <tr>
-            <th>Doctor's Name</th>
+            <th>Doctor Name</th>
             <th>Clinic</th>
             <th>Date Last Seen</th>
           </tr>
-        </thead>
-        <tbody>
+          </thead>
+          <tbody>
           {providers.map((record, key) => (
             <tr key={key}>
               <td className="modal-link" onClick={() => this.onClick(record)}>
@@ -131,8 +173,9 @@ class Providers extends Component {
               <td>{record.date}</td>
             </tr>
           ))}
-        </tbody>
-      </Table>
+          </tbody>
+        </Table>
+      </Fragment>
     );
   }
 }
