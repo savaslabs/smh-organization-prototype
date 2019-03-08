@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Form, Button, Table } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 
 import Note from "../Note";
 
